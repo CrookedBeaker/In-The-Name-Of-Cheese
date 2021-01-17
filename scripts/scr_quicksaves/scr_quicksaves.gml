@@ -1,0 +1,354 @@
+//Quick save and load
+
+function QuickSave() {
+
+//Make an array for the save
+var data = array_create(0);
+
+//Start saving instances!
+with obj_player {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		immobile : immobile,
+		spd : spd,
+		dir : dir,
+		knockback : knockback,
+		knockbackDir : knockbackDir,
+		invincible : invincible,
+		burn : burn
+	}
+	array_push(data,entity);
+}
+
+with obj_player_body {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		attacking : attacking
+	}
+	array_push(data,entity);
+}
+
+with obj_player_legs {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth
+	}
+	array_push(data,entity);
+}
+
+with obj_camera {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		bounds : bounds,
+		xTo : xTo,
+		yTo : yTo,
+		stop : stop
+	}
+	array_push(data,entity);
+}
+
+with obj_projectile {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		spd : spd,
+		fire : fire,
+		dmg : dmg,
+		pproj : pproj
+	}
+	array_push(data,entity);
+}
+
+with obj_particle_exp {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		val : val
+	}
+	array_push(data,entity);
+}
+
+with obj_bolt {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		atk : atk,
+		ignorePlayer : ignorePlayer
+	}
+	array_push(data,entity);
+}
+
+with obj_shield {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		lifetime : lifetime
+	}
+	array_push(data,entity);
+}
+
+with obj_stun {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth
+	}
+	array_push(data,entity);
+}
+
+//Oh god all the enemies
+with obj_enemy {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		state : state,
+		hp : hp,
+		knockback : knockback,
+		knockbackDir : knockbackDir,
+		invincible : invincible,
+		idleWait : idleWait,
+		burn : burn,
+		stunned : stunned
+	}
+	
+	if entity.obj = "obj_e_rat" {
+		entity.spd = spd;
+		entity.turnSpeed = turnSpeed;
+		entity.chargeDur = chargeDur;
+		entity.nextDir = nextDir;
+		entity.playerSpotted = playerSpotted;
+		entity.playerIgnore = playerIgnore;
+	}
+	array_push(data,entity);
+}
+
+//Add global stuff
+var entity = {
+	obj : "global",
+	HP : global.pHP,
+	HPMax : global.pHPMax,
+	MP : global.pMP,
+	MPMax : global.pMPMax,
+	EXP : global.pEXP,
+	EXPMax : global.pEXPMax,
+	LVL : global.pLVL,
+	ATK : global.pATK,
+	spells : global.spells,
+	spellSelect : global.spellSelect,
+	
+	rm : room
+}
+array_push(data,entity);
+
+//Convert to a JSON string using a buffer
+var saveStr = json_stringify(data);
+var buffer = buffer_create(string_byte_length(saveStr)+1,buffer_fixed,1);
+buffer_write(buffer,buffer_string,saveStr);
+buffer_save(buffer,"quicksave.save");
+
+show_debug_message("Quick saved.");
+
+}
+
+//Switch to the right room to load from
+function LoadRoom(rm) {
+	global.loading = true;
+	global.pause = true;
+	room_goto(rm);
+}
+
+//Load!
+function QuickLoad() {
+if file_exists("quicksave.save") {
+
+global.loading = true;
+//global.loadingRoom = room;
+
+//Erase game state lol
+with obj_escmenu instance_destroy();
+with obj_menubutton instance_destroy();
+with obj_player instance_destroy();
+with obj_player_body instance_destroy();
+with obj_player_legs instance_destroy();
+with obj_camera instance_destroy();
+with obj_enemy instance_destroy();
+with obj_particle_exp instance_destroy();
+with obj_particle_lvlup instance_destroy();
+with obj_particle_num instance_destroy();
+with obj_particle_num_gain instance_destroy();
+with obj_bolt instance_destroy();
+with obj_shield instance_destroy();
+with obj_stun instance_destroy();
+
+//Load it!
+var buffer = buffer_load("quicksave.save");
+var str = buffer_read(buffer,buffer_string);
+buffer_delete(buffer)
+
+var loadData = json_parse(str);
+
+//Apply it!
+while array_length(loadData) > 0 {
+	var entity = array_pop(loadData);
+	
+	if entity.obj != "global" { //Load the entity
+		var inst = instance_create_depth(0,0,layer,asset_get_index(entity.obj));
+		
+		with inst {
+			y = entity.y;
+			x = entity.x;
+			image_index = entity.image_index;
+			sprite_index = entity.sprite_index;
+			direction = entity.direction;
+			depth = entity.depth;
+			
+			switch entity.obj {
+				case "obj_player":
+					immobile = entity.immobile;
+					spd = entity.spd;
+					dir = entity.dir;
+					knockback = entity.knockback;
+					knockbackDir = entity.knockbackDir;
+					invincible = entity.invincible;
+					burn = entity.burn;
+					break;
+				case "obj_player_body":
+					attacking = entity.attacking;
+					break;
+				case "obj_camera":
+					bounds = entity.bounds;
+					xTo = entity.xTo;
+					yTo = entity.yTo;
+					stop = entity.stop;
+					break;
+				case "obj_projectile":
+					spd = entity.spd;
+					fire = entity.fire;
+					dmg = entity.dmg;
+					pproj = entity.pproj;
+					break;
+				case "obj_particle_exp":
+					val = entity.val;
+					break;
+				case "obj_bolt":
+					atk = entity.atk;
+					ignorePlayer = entity.ignorePlayer;
+					break;
+				case "obj_shield":
+					lifetime = entity.lifetime;
+					break;
+				case "obj_enemy":
+					state = entity.state;
+					hp = entity.hp;
+					knockback = entity.knockback;
+					knockbackDir = entity.knockbackDir;
+					invincible = entity.invincible;
+					idleWait = entity.idleWait;
+					burn = entity.burn;
+					stunned = entity.stunned;
+					break;
+				case "obj_e_rat":
+					state = entity.state;
+					hp = entity.hp;
+					knockback = entity.knockback;
+					knockbackDir = entity.knockbackDir;
+					invincible = entity.invincible;
+					idleWait = entity.idleWait;
+					burn = entity.burn;
+					stunned = entity.stunned;
+					spd = entity.spd;
+					turnSpeed = entity.turnSpeed;
+					chargeDur = entity.chargeDur;
+					nextDir = entity.nextDir;
+					playerSpotted = entity.playerSpotted;
+					playerIgnore = entity.playerIgnore;
+					break;
+			}
+		}
+		
+	} else { //Load global stuff
+		
+		global.pHP = entity.HP;
+		global.pHPMax = entity.HPMax;
+		global.pMP = entity.MP;
+		global.pMPMax = entity.MPMax;
+		
+		global.pEXP = entity.EXP;
+		global.pEXPMax = entity.EXPMax;
+		global.pLVL = entity.LVL;
+		
+		global.pATK = entity.ATK;
+		
+		global.spells = entity.spells;
+		global.spellSelect = entity.spellSelect;
+		
+		if entity.rm != room {
+			LoadRoom(entity.rm);
+		} else {
+			global.loading = false;
+		}
+	}
+}
+
+//Spawn in the menu afterwards
+instance_create_depth(obj_camera.x,obj_camera.y,obj_camera.depth,obj_escmenu);
+
+show_debug_message("Quick save loaded.");
+
+} else { //No save file
+	
+}
+
+}

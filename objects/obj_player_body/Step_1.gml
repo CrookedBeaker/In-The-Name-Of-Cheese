@@ -1,0 +1,23 @@
+/// @description Get spell stuff together
+
+switch global.spellSelect {
+	case 0:
+		cost = 2;
+		chargeMax = 30;
+		break;
+	case 1:
+		cost = 3;
+		chargeMax = 90;
+		break;
+	case 2:
+		cost = 2;
+		chargeMax = 30;
+		break;
+	case 3:
+		cost = 5;
+		chargeMax = 180;
+		break;
+	case 4:
+		cost = 10;
+		chargeMax = 300;	
+}
