@@ -81,3 +81,31 @@ function CastSpell() {
 			global.pHP = clamp(global.pHP+10,0,global.pHPMax);
 	}
 }
+
+//Check to see if an object already has a p variable of an object's ID
+function NoIdForP(object) {
+	var i = true;
+	var inst = id;
+	
+	with object {
+		if variable_instance_exists(id,"p") {
+			if p = inst {i = false};
+		}
+	}
+	
+	return i;
+}
+
+//Retrieve the object with it
+function GetIdForP(object) {
+	var inst = id;
+	var i = -1;
+	
+	with object {
+		if variable_instance_exists(id,"p") {
+			if p = inst {i = id};
+		}
+	}
+	
+	return i;
+}

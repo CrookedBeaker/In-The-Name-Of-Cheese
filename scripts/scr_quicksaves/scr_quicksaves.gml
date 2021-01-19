@@ -145,6 +145,7 @@ with obj_stun {
 
 //Oh god all the enemies
 with obj_enemy {
+	show_debug_message("got this far!")
 	var entity = {
 		obj : object_get_name(object_index),
 		y : y,
@@ -171,9 +172,71 @@ with obj_enemy {
 		entity.playerSpotted = playerSpotted;
 		entity.playerIgnore = playerIgnore;
 	}
+	
+	if entity.obj = "obj_e_guard" {
+		entity.startDir = startDir;
+		entity.targetDir = targetDir;
+		entity.playerSpotted = playerSpotted;
+		entity.playerIgnore = playerIgnore;
+		entity.turnDir = turnDir;
+	}
+	
+	array_push(data,entity);
+}
+/*
+with obj_e_rat {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		state : state,
+		hp : hp,
+		knockback : knockback,
+		knockbackDir : knockbackDir,
+		invincible : invincible,
+		idleWait : idleWait,
+		burn : burn,
+		stunned : stunned,
+		spd : spd,
+		turnSpeed : turnSpeed,
+		chargeDur : chargeDur,
+		nextDir : nextDir,
+		playerSpotted : playerSpotted,
+		playerIgnore : playerIgnore
+	}
 	array_push(data,entity);
 }
 
+with obj_e_guard {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		state : state,
+		hp : hp,
+		knockback : knockback,
+		knockbackDir : knockbackDir,
+		invincible : invincible,
+		idleWait : idleWait,
+		burn : burn,
+		stunned : stunned,
+		startDir : startDir,
+		targetDir : targetDir,
+		playerSpotted : playerSpotted,
+		playerIgnore : playerIgnore,
+		turnDir : turnDir
+	}
+	array_push(data,entity);
+}
+*/
 //Add global stuff
 var entity = {
 	obj : "global",
@@ -315,6 +378,43 @@ while array_length(loadData) > 0 {
 					playerSpotted = entity.playerSpotted;
 					playerIgnore = entity.playerIgnore;
 					break;
+				case "obj_e_guard": //Guards
+					//id = entity.id;
+					state = entity.state;
+					hp = entity.hp;
+					knockback = entity.knockback;
+					knockbackDir = entity.knockbackDir;
+					invincible = entity.invincible;
+					idleWait = entity.idleWait;
+					burn = entity.burn;
+					stunned = entity.stunned;
+					startDir = entity.startDir;
+					targetDir = entity.targetDir;
+					playerSpotted = entity.playerSpotted;
+					playerIgnore = entity.playerIgnore;
+					turnDir = entity.turnDir;
+					
+					/*
+					//Some extra variables for the saved states of the body and legs
+					body_image_index = entity.body_image_index;
+					body_sprite_index = entity.body_sprite_index;
+					body_direction = entity.body_direction;
+					body_depth = entity.body_depth;
+					legs_image_index = entity.legs_image_index;
+					legs_sprite_index = entity.legs_sprite_index;
+					legs_direction = entity.legs_direction;
+					legs_depth = entity.legs_depth;
+					*/
+					break;
+				/*
+				case "obj_e_guard_body":
+					state = entity.state;
+					p = entity.p;
+					break;
+				case "obj_e_guard_legs":
+					p = entity.p;
+					break;
+				*/
 			}
 		}
 		
@@ -336,8 +436,10 @@ while array_length(loadData) > 0 {
 		
 		if entity.rm != room {
 			LoadRoom(entity.rm);
+			show_debug_message("Switching to the room in the save.");
 		} else {
 			global.loading = false;
+			show_debug_message("Quick save loaded.");
 		}
 	}
 }
@@ -345,9 +447,9 @@ while array_length(loadData) > 0 {
 //Spawn in the menu afterwards
 instance_create_depth(obj_camera.x,obj_camera.y,obj_camera.depth,obj_escmenu);
 
-show_debug_message("Quick save loaded.");
-
 } else { //No save file
+	
+	show_debug_message("No save file found.");
 	
 }
 
