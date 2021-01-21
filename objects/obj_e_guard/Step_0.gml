@@ -4,6 +4,7 @@
 event_inherited();
 
 if !global.pause {
+if knockback = 0 {
 
 image_index = !(state = "idle" || state = "turn");
 
@@ -18,14 +19,15 @@ if instance_exists(obj_player) && !ignorePlayer && state != "attack" {
 switch state {
 	case "idle": //Idle, that's about it
 		//Reset turning direction
-		direction = startDir;
+		motion_set(direction,0);
+		
 		var r = irandom(1);
-		targetDir = (r = 0) ? startDir+45 : startDir-45;
+		targetDir = (r = 0) ? direction+45 : direction-45;
 		if targetDir < 0 {targetDir+=360};
 		turnDir = (r = 0);
 		
 		//Wait for idle to be done
-		if idleWait = 0 {
+		if idleWait = 0 && instance_exists(obj_player) {
 			state = playerSpotted ? "chase" : "turn";
 		}
 		
@@ -43,12 +45,18 @@ switch state {
 		
 		break;
 	case "chase": //Run after him
-		motion_set(pDir,0.5);
+		motion_set(pDir,1);
 		
-		if distance_to_object(obj_player) <= 96 {
+		if distance_to_object(obj_player) <= 64 {
 			state = "attack";
 			body.image_index = 0;
 		}
+		
+		//Revert to idle state
+		if !instance_exists(obj_player) {GoIdle(1)}
+		
+		spd = 1;
+		dir = direction;
 		
 		break;
 	case "attack": //Hit him!
@@ -56,8 +64,9 @@ switch state {
 		//Wait for the body to finish attacking
 }
 
-//Leg stuff
-spd = point_distance(xprevious,yprevious,x,y);
-dir = point_direction(xprevious,yprevious,x,y);
+}
+
+//If hit, know the player is there, regardless of knockback
+if place_meeting(x,y,obj_player_body) {playerSpotted = true}
 
 }

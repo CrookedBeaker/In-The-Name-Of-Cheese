@@ -16,10 +16,22 @@ if IsAttacked() {
 	invincible = 60;
 }
 
-//Getting knocked back
+//Getting knocked back, turning with direction
 if knockback > 0 {
 	knockback = lerp(knockback,0,0.2);
 	motion_set(knockbackDir,knockback);
+	image_speed = 0;
+	
+	//Leg stuff if they have it
+	spd = 0;
+	dir = 0;
+} else {
+	//Set image angle
+	image_angle = direction;
+	
+	//Leg stuff if they have it
+	spd = point_distance(xprevious,yprevious,x,y);
+	dir = point_direction(xprevious,yprevious,x,y);
 }
 
 //BURN
@@ -48,5 +60,3 @@ if idleWait != 0 {
 	motion_set(direction,0);
 	image_speed = 0;
 }
-
-image_angle = direction;

@@ -6,3 +6,7 @@ function GoIdle(time) {
 	state = "idle";
 	idleWait = time;
 }
+
+//Leg stuff
+spd = 0;
+dir = 0;

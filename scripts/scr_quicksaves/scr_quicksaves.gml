@@ -183,60 +183,7 @@ with obj_enemy {
 	
 	array_push(data,entity);
 }
-/*
-with obj_e_rat {
-	var entity = {
-		obj : object_get_name(object_index),
-		y : y,
-		x : x,
-		image_index : image_index,
-		sprite_index : sprite_index,
-		direction : direction,
-		depth : depth,
-		state : state,
-		hp : hp,
-		knockback : knockback,
-		knockbackDir : knockbackDir,
-		invincible : invincible,
-		idleWait : idleWait,
-		burn : burn,
-		stunned : stunned,
-		spd : spd,
-		turnSpeed : turnSpeed,
-		chargeDur : chargeDur,
-		nextDir : nextDir,
-		playerSpotted : playerSpotted,
-		playerIgnore : playerIgnore
-	}
-	array_push(data,entity);
-}
 
-with obj_e_guard {
-	var entity = {
-		obj : object_get_name(object_index),
-		y : y,
-		x : x,
-		image_index : image_index,
-		sprite_index : sprite_index,
-		direction : direction,
-		depth : depth,
-		state : state,
-		hp : hp,
-		knockback : knockback,
-		knockbackDir : knockbackDir,
-		invincible : invincible,
-		idleWait : idleWait,
-		burn : burn,
-		stunned : stunned,
-		startDir : startDir,
-		targetDir : targetDir,
-		playerSpotted : playerSpotted,
-		playerIgnore : playerIgnore,
-		turnDir : turnDir
-	}
-	array_push(data,entity);
-}
-*/
 //Add global stuff
 var entity = {
 	obj : "global",
@@ -393,28 +340,7 @@ while array_length(loadData) > 0 {
 					playerSpotted = entity.playerSpotted;
 					playerIgnore = entity.playerIgnore;
 					turnDir = entity.turnDir;
-					
-					/*
-					//Some extra variables for the saved states of the body and legs
-					body_image_index = entity.body_image_index;
-					body_sprite_index = entity.body_sprite_index;
-					body_direction = entity.body_direction;
-					body_depth = entity.body_depth;
-					legs_image_index = entity.legs_image_index;
-					legs_sprite_index = entity.legs_sprite_index;
-					legs_direction = entity.legs_direction;
-					legs_depth = entity.legs_depth;
-					*/
 					break;
-				/*
-				case "obj_e_guard_body":
-					state = entity.state;
-					p = entity.p;
-					break;
-				case "obj_e_guard_legs":
-					p = entity.p;
-					break;
-				*/
 			}
 		}
 		

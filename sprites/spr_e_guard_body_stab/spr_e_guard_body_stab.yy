@@ -77,7 +77,7 @@
     "spriteId": {"name":"spr_e_guard_body_stab","path":"sprites/spr_e_guard_body_stab/spr_e_guard_body_stab.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 8.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
