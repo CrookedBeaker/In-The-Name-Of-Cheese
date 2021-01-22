@@ -13,7 +13,7 @@ y = p.y;
 depth = p.depth+2;
 
 if p.spd != 0 && p.knockback = 0 { 
-	sprite_index = spr_e_legs;
+	sprite_index = spr_e_guard_legs;
 } else {
 	sprite_index = -1;
 	image_index = 0;

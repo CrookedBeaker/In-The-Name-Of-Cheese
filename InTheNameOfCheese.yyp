@@ -61,6 +61,7 @@
     {"id":{"name":"scr_interactions","path":"scripts/scr_interactions/scr_interactions.yy",},"order":5,},
     {"id":{"name":"spr_menu","path":"sprites/spr_menu/spr_menu.yy",},"order":3,},
     {"id":{"name":"obj_unlock","path":"objects/obj_unlock/obj_unlock.yy",},"order":2,},
+    {"id":{"name":"spr_e_guard_legs","path":"sprites/spr_e_guard_legs/spr_e_guard_legs.yy",},"order":3,},
     {"id":{"name":"spr_e_legs","path":"sprites/spr_e_legs/spr_e_legs.yy",},"order":4,},
     {"id":{"name":"obj_enemy","path":"objects/obj_enemy/obj_enemy.yy",},"order":0,},
     {"id":{"name":"spr_ui_select","path":"sprites/spr_ui_select/spr_ui_select.yy",},"order":5,},
