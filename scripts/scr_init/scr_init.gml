@@ -17,7 +17,7 @@ function SetDefaultGlobals() {
 	
 	global.pATK = 1;
 	
-	global.spells = [true,true,true,true,false];
+	global.spells = [false,false,false,false,false];
 	global.spellSelect = 0;
 	
 	global.loading = false;

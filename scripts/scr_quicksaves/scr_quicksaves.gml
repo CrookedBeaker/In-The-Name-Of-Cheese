@@ -143,9 +143,37 @@ with obj_stun {
 	array_push(data,entity);
 }
 
+//Switches and stuff
+with obj_switch {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth
+	}
+	array_push(data,entity);
+}
+
+with obj_focus {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		swX : swX,
+		swY : swY
+	}
+	array_push(data,entity);
+}
+
 //Oh god all the enemies
 with obj_enemy {
-	show_debug_message("got this far!")
 	var entity = {
 		obj : object_get_name(object_index),
 		y : y,
@@ -181,6 +209,33 @@ with obj_enemy {
 		entity.turnDir = turnDir;
 	}
 	
+	array_push(data,entity);
+}
+
+//Pickups
+with obj_potion {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth
+	}
+	array_push(data,entity);
+}
+
+with obj_elixir {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth
+	}
 	array_push(data,entity);
 }
 
@@ -241,6 +296,10 @@ with obj_particle_num_gain instance_destroy();
 with obj_bolt instance_destroy();
 with obj_shield instance_destroy();
 with obj_stun instance_destroy();
+with obj_potion instance_destroy();
+with obj_elixir instance_destroy();
+with obj_switch instance_destroy();
+with obj_focus instance_destroy();
 
 //Load it!
 var buffer = buffer_load("quicksave.save");
@@ -262,6 +321,7 @@ while array_length(loadData) > 0 {
 			image_index = entity.image_index;
 			sprite_index = entity.sprite_index;
 			direction = entity.direction;
+			image_angle = direction; //Testing
 			depth = entity.depth;
 			
 			switch entity.obj {
@@ -299,6 +359,12 @@ while array_length(loadData) > 0 {
 				case "obj_shield":
 					lifetime = entity.lifetime;
 					break;
+				case "obj_focus":
+				case "obj_gate":
+					swX = entity.swX;
+					swY = entity.swY;
+					//swIns = entity.swIns;
+					break;
 				case "obj_enemy":
 					state = entity.state;
 					hp = entity.hp;
@@ -326,7 +392,6 @@ while array_length(loadData) > 0 {
 					playerIgnore = entity.playerIgnore;
 					break;
 				case "obj_e_guard": //Guards
-					//id = entity.id;
 					state = entity.state;
 					hp = entity.hp;
 					knockback = entity.knockback;

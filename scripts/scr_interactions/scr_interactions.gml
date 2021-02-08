@@ -82,6 +82,34 @@ function CastSpell() {
 	}
 }
 
+//Drop a thing depending on health
+function DropRan() {
+	var chance = 0; //Out of 10
+	
+	//Increase based on health
+	chance += 3-ceil(global.pHP*3/global.pHPMax); //Increase by a max of 3
+	
+	//Increase based on magic
+	chance += 3-ceil(global.pMP*3/global.pMPMax); //Increase by a max of 3
+	
+	//Generate randomly!
+	if (irandom(9) < chance) {
+		if (global.pHP < global.pMP) { //Drop a potion first, then alternate if hp is less than mp
+			if (instance_number(obj_potion) <= instance_number(obj_elixir)) {
+				instance_create_depth(x,y,depth+5,obj_potion);
+			} else {
+				instance_create_depth(x,y,depth+5,obj_elixir);
+			}
+		} else { //Drop an elixir first, then alternate if mp is less than hp
+			if (instance_number(obj_elixir) <= instance_number(obj_potion)) {
+				instance_create_depth(x,y,depth+5,obj_elixir);
+			} else {
+				instance_create_depth(x,y,depth+5,obj_potion);
+			}
+		}
+	}
+}
+
 //Check to see if an object already has a p variable of an object's ID
 function NoIdForP(object) {
 	var i = true;

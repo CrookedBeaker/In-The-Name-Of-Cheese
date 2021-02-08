@@ -31,6 +31,15 @@ if !global.loading {
 //My own additions
 bounds = [0,0,room_width,room_height];
 
+//Make sure the camera can't go outside the room at spawn
+xmin = (bounds[0]+width/2);
+ymin = (bounds[1]+height/2);
+xmax = (bounds[2]-width/2);
+ymax = (bounds[3]-height/2);
+
+x = clamp(x,xmin,xmax);
+y = clamp(y,ymin,ymax);
+
 followNext = noone;
 
 //Create a transition if transitioning

@@ -1,6 +1,13 @@
 /// @description Take damage!
 
-if invincible = 0 && !other.ignorePlayer {
+//See if it's blocked by a shield
+var blocked = false;
+with other {
+	blocked = place_meeting(x,y,obj_shield);
+}
+
+//Get hurt
+if invincible = 0 && !other.ignorePlayer && !blocked {
 	var c = IsCrit(); //Roll for a critical
 	var d = c ? other.atk*2 : other.atk;
 	global.pHP -= d;

@@ -47,6 +47,7 @@ if burn != 0 {
 if hp <= 0 {
 	instance_destroy();
 	DropExp(expDrop);
+	DropRan();
 }
 
 //Idle waiting

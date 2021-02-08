@@ -47,7 +47,7 @@ switch state {
 		break;
 	case "charge":
 		image_speed = 1;
-		motion_set(direction,spd+spd*playerSpotted);
+		motion_set(direction,2+2*playerSpotted); //for some reason spd gets reset before this so uh... yeah. it's not like it's supposed to at any point.
 		chargeDur--;
 		if chargeDur = 0 {
 			motion_set(direction,0);
