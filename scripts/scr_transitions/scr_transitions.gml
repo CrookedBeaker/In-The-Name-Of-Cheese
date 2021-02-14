@@ -12,7 +12,7 @@ function TransitionPlaceSequence(seq) {
 		layer_sequence_create(l,obj_camera.x,obj_camera.y,seq);
 		obj_camera.stop = true;
 	} else {
-		layer_sequence_create(l,0,0,seq);
+		layer_sequence_create(l,320,240,seq);
 	}
 }
 
@@ -22,6 +22,8 @@ function Transition(targetRoom,seqOut,seqIn) {
 		global.transition = true;
 		global.targetRoom = targetRoom;
 		global.transitionIn = seqIn;
+		global.prevRoom = room;
+		global.pause = true;
 		TransitionPlaceSequence(seqOut);
 		
 		/*
@@ -52,6 +54,7 @@ function TransitionChangeRoom() {
 function TransitionFinished() {
 	layer_sequence_destroy(self.elementID);
 	global.transition = false;
+	global.pause = false;
 	
 	//Reenable camera movement
 	if instance_exists(obj_camera) {obj_camera.stop = false};

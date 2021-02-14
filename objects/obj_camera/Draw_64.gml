@@ -104,6 +104,7 @@ if global.spells[4] {draw_sprite(spr_spells,4,132,444)};
 
 draw_set_alpha(1);
 
+/*
 //Testing
 draw_set_halign(fa_left);
 draw_set_font(fnt_ui);

@@ -1,5 +1,6 @@
 /// @description Get rid of it
 
-global.pause = false;
+if !global.transition {global.pause = false}
+
 obj_camera.stop = false;
 NukeButtons();

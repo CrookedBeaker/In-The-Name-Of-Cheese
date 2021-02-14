@@ -48,6 +48,11 @@ if hp <= 0 {
 	instance_destroy();
 	DropExp(expDrop);
 	DropRan();
+	
+	//Produce a dead body
+	var inst = instance_create_depth(x,y,depth,obj_corpse);
+	inst.parent = object_index;
+	inst.image_angle = image_angle+90;
 }
 
 //Idle waiting

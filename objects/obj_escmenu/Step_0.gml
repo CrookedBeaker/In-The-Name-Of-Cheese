@@ -62,7 +62,8 @@ switch menuID {
 	case 3:
 		
 		if select = 0 {
-			game_end();
+			Transition(rm_title,seq_fadeout,seq_fadein);
+			instance_destroy();
 		} else if select = 1 {
 			SetMenu(0);
 		}

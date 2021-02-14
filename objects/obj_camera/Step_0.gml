@@ -19,11 +19,15 @@ if instance_exists(obj_player) {
 			xTo = clamp(follow.x + (lookHor),xmin,xmax);
 			yTo = clamp(follow.y + (lookVer),ymin,ymax);
 		}
-	} else if follow != noone {
+	} else if (follow != noone) {
+		//Cannot manipulate the camera while focused on something else
+		xTo = clamp(follow.x+(follow.sprite_width*follow.image_xscale*0.5),xmin,xmax);
+		yTo = clamp(follow.y+(follow.sprite_height*follow.image_yscale*0.5),ymin,ymax);
+	} /*else if follow != noone {
 		//Cannot manipulate the camera while focused on something else
 		xTo = clamp(follow.x,xmin,xmax);
 		yTo = clamp(follow.y,ymin,ymax);
-	}
+	}*/
 }
 
 //Update the camera
