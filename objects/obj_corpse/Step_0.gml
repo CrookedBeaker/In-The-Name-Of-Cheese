@@ -17,3 +17,5 @@ switch parent {
 while place_meeting(x,y,obj_collision) {
 	image_angle++;
 }
+
+direction = image_angle;

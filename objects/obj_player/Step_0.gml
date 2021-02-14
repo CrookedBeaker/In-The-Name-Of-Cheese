@@ -62,7 +62,7 @@ if global.spells[0] {
 			if global.spellSelect > 4 {
 				global.spellSelect = 0;
 			}
-		} until global.spells[global.spellSelect]
+		} until global.spells[global.spellSelect];
 	}
 	
 	if mouse_wheel_up() {
@@ -71,16 +71,8 @@ if global.spells[0] {
 			if global.spellSelect < 0 {
 				global.spellSelect = 4;
 			}
-		} until global.spells[global.spellSelect]
+		} until global.spells[global.spellSelect];
 	}
-}
-
-//Testing
-if keyboard_check_pressed(vk_space) {
-	if room = Room1 var rm = Room2;
-	if room = Room2 var rm = Room1;
-	global.test = Transition(rm,seq_rhombout,seq_fadein);
-	//layer_sequence_create("Test",x,y,seq_fadein);
 }
 
 if global.pHP <= 0 {
@@ -89,6 +81,11 @@ if global.pHP <= 0 {
 	instance_destroy(obj_player_body);
 	instance_destroy(obj_player_legs);
 	DropExp(global.pEXP);
+	
+	//Produce a dead body
+	var inst = instance_create_depth(x,y,depth+50,obj_corpse);
+	inst.parent = object_index;
+	inst.image_angle = knockbackDir-90;
 }
 
 }

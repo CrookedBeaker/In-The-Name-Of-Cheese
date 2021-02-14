@@ -50,9 +50,9 @@ if hp <= 0 {
 	DropRan();
 	
 	//Produce a dead body
-	var inst = instance_create_depth(x,y,depth,obj_corpse);
+	var inst = instance_create_depth(x,y,depth+50,obj_corpse);
 	inst.parent = object_index;
-	inst.image_angle = image_angle+90;
+	inst.image_angle = knockbackDir-90;
 }
 
 //Idle waiting

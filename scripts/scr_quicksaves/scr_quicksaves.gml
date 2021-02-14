@@ -226,6 +226,21 @@ with obj_potion {
 	array_push(data,entity);
 }
 
+//Dead bodies
+with obj_corpse {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		parent : parent
+	}
+	array_push(data,entity);
+}
+
 with obj_elixir {
 	var entity = {
 		obj : object_get_name(object_index),
@@ -300,6 +315,7 @@ with obj_potion instance_destroy();
 with obj_elixir instance_destroy();
 with obj_switch instance_destroy();
 with obj_focus instance_destroy();
+with obj_corpse instance_destroy();
 
 //Load it!
 var buffer = buffer_load("quicksave.save");
@@ -406,6 +422,8 @@ while array_length(loadData) > 0 {
 					playerIgnore = entity.playerIgnore;
 					turnDir = entity.turnDir;
 					break;
+				case "obj_corpse": //Dead Bodies
+					parent = entity.parent;
 			}
 		}
 		
