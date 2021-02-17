@@ -226,6 +226,19 @@ with obj_potion {
 	array_push(data,entity);
 }
 
+with obj_elixir {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth
+	}
+	array_push(data,entity);
+}
+
 //Dead bodies
 with obj_corpse {
 	var entity = {
@@ -237,19 +250,6 @@ with obj_corpse {
 		direction : direction,
 		depth : depth,
 		parent : parent
-	}
-	array_push(data,entity);
-}
-
-with obj_elixir {
-	var entity = {
-		obj : object_get_name(object_index),
-		y : y,
-		x : x,
-		image_index : image_index,
-		sprite_index : sprite_index,
-		direction : direction,
-		depth : depth
 	}
 	array_push(data,entity);
 }

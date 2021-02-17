@@ -1,0 +1,2 @@
+SaveGame();
+global.transition = false;

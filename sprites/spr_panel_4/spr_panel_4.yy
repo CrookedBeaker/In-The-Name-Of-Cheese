@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"04326088-6d39-4304-b0a0-10e7e1be0999","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Title screen and into cutscene",
-    "path": "folders/Sprites/Title screen and into cutscene.yy",
+    "name": "Title screen and cutscenes",
+    "path": "folders/Sprites/Title screen and cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_panel_4",

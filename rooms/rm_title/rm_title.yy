@@ -68,8 +68,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Intro and Title",
-    "path": "folders/Rooms/Intro and Title.yy",
+    "name": "Title and Cutscenes",
+    "path": "folders/Rooms/Title and Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "rm_title",

@@ -33,8 +33,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "UI and Menu",
-    "path": "folders/Objects/UI and Menu.yy",
+    "name": "UI and Menu and Cutscenes",
+    "path": "folders/Objects/UI and Menu and Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_escmenu",

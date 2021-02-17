@@ -1,5 +1,5 @@
 ///For buttons
-function MultiInput(keyboard,controller,pressed){
+function MultiInput(keyboard,controller,pressed) {
 	var i = 0;
 	
 	if pressed {
@@ -14,7 +14,7 @@ function MultiInput(keyboard,controller,pressed){
 }
 
 ///For sticks
-function MultiInputStickDigital(keyboard,axis,neg,pressed){
+function MultiInputStickDigital(keyboard,axis,neg,pressed) {
 	var i = 0;
 	
 	if pressed {

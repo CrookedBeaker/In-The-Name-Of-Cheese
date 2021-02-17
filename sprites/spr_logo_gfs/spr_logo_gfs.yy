@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f1cd4012-2410-436c-83b5-48888790ddc3","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Title screen and into cutscene",
-    "path": "folders/Sprites/Title screen and into cutscene.yy",
+    "name": "Title screen and cutscenes",
+    "path": "folders/Sprites/Title screen and cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_logo_gfs",

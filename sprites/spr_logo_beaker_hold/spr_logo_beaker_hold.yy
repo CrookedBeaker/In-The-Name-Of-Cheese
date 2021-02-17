@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"792b8421-a6f5-4dcf-8f75-66cedbd0e94f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Title screen and into cutscene",
-    "path": "folders/Sprites/Title screen and into cutscene.yy",
+    "name": "Title screen and cutscenes",
+    "path": "folders/Sprites/Title screen and cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_logo_beaker_hold",
