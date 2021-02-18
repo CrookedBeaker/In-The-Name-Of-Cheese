@@ -20,6 +20,7 @@ function SetDefaultGlobals() {
 	global.spells = [false,false,false,false,false];
 	global.spellSelect = 0;
 	
+	global.mainHallReached = false;
 	global.loading = false;
 }
 

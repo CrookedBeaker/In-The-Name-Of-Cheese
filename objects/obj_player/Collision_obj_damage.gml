@@ -17,4 +17,7 @@ if invincible = 0 && !other.ignorePlayer && !blocked {
 	knockbackDir = point_direction(other.x,other.y,x,y);
 	
 	invincible = 180;
+	
+	//Screenshake, baby!
+	Screenshake(10,5);
 }

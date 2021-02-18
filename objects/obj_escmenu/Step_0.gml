@@ -38,8 +38,13 @@ switch menuID {
 				select = -1;
 				SetMenu(0);
 				break;
-			case 1: //Level open
-				//Will do later
+			case 1: //Area Start / Main Hall
+				if global.mainHallReached {
+					LoadGame();
+				} else {
+					SetDefaultGlobals();
+					Transition(rm_sewer_1,seq_fadeout,seq_fadein);
+				}
 				instance_destroy();
 				break;
 			case 2 : //Back

@@ -1,7 +1,24 @@
 /// @description Skoot
-if !stop {
-	x += (xTo-x)/15;
-	y += (yTo-y)/15;
+if !stop { //Set where the X and Y need to be
+	xReg += (xTo-xReg)/15;
+	yReg += (yTo-yReg)/15;
+}
+
+//Make sure the camera stays in-bounds
+xReg = clamp(xReg,xmin,xmax);
+yReg = clamp(yReg,ymin,ymax);
+
+if shakeDur > 0 { //Offset the camera if possible
+	var xShake = irandom_range(-shakeInt,shakeInt);
+	var yShake = irandom_range(-shakeInt,shakeInt);
+	
+	x = xReg+xShake;
+	y = yReg+yShake;
+	
+	shakeDur--;
+} else { //Regular camera positioning
+	x = xReg;
+	y = yReg;
 }
 
 xmin = (bounds[0]+width/2);

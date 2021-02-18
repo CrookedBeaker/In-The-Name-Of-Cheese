@@ -34,6 +34,9 @@
             {"propertyId":{"name":"pOffsetX","path":"objects/obj_door/obj_door.yy",},"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"value":"-48","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"target","path":"objects/obj_door/obj_door.yy",},"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"value":"rm_sewer_2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":4.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1344.0,"y":128.0,"resourceVersion":"1.0","name":"inst_1EB13B57","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"str","path":"objects/obj_tutorial/obj_tutorial.yy",},"objectId":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"value":"Walk around with WASD\\n\\nAttack with M1\\n\\nPress ESC to pause\\nand quick save","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"obj_tutorial","path":"objects/obj_tutorial/obj_tutorial.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":416.0,"y":192.0,"resourceVersion":"1.0","name":"inst_4BEEB33B","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"tilesetId":{"name":"tls_sewer","path":"tilesets/tls_sewer/tls_sewer.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":45,"SerialiseHeight":48,"TileSerialiseData":[
 2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,2147483648,
@@ -135,6 +138,7 @@
     {"name":"inst_58CDA55D","path":"rooms/rm_sewer_1/rm_sewer_1.yy",},
     {"name":"inst_72D78F4B","path":"rooms/rm_sewer_1/rm_sewer_1.yy",},
     {"name":"inst_1EB13B57","path":"rooms/rm_sewer_1/rm_sewer_1.yy",},
+    {"name":"inst_4BEEB33B","path":"rooms/rm_sewer_1/rm_sewer_1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

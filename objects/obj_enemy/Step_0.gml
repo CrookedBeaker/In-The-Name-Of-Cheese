@@ -14,6 +14,16 @@ if IsAttacked() {
 	knockbackDir = point_direction(obj_player.x,obj_player.y,x,y);
 	
 	invincible = 60;
+	
+	with obj_player_body {
+		//Calculate the modifiers for getting the blood to appear on the sword
+		var r = point_distance(0,0,61,19);
+		var a = -(image_angle+point_direction(0,0,61,19));
+		var xMod = r*dcos(a);
+		var yMod = r*dsin(a);
+		
+		BloodSplatter(x+xMod,y+yMod);
+	}
 }
 
 //Getting knocked back, turning with direction

@@ -20,6 +20,9 @@ function SaveGame() {
 	ini_write_real("Spells","spell-4",global.spells[4]);
 	
 	ini_close();
+	
+	//Enable loading your save file from esc menu
+	global.mainHallReached = true;
 }
 
 function LoadGame() {
@@ -44,6 +47,7 @@ function LoadGame() {
 	
 	//Unsaved global defaults
 	global.spellSelect = 0;
+	global.mainHallReached = true;
 	
 	ini_close();
 	

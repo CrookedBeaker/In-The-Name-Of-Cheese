@@ -14,4 +14,7 @@ if invincible = 0 && !other.pproj {
 	if other.fire {burn = 180};
 	
 	instance_destroy(other);
+	
+	//Screenshake, baby!
+	Screenshake(10,5);
 }

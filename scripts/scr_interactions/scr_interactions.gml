@@ -110,6 +110,18 @@ function DropRan() {
 	}
 }
 
+function Screenshake(dur,intensity) {
+	if instance_exists(obj_camera) { //Make sure you got a camera to work with
+		obj_camera.shakeDur = dur;
+		obj_camera.shakeInt = intensity;
+		
+		return true; //Success!
+	} else {
+		return false; //Failed!
+	}
+}
+
+/*
 //Check to see if an object already has a p variable of an object's ID
 function NoIdForP(object) {
 	var i = true;

@@ -25,8 +25,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Particles",
-    "path": "folders/Objects/Particles.yy",
+    "name": "UI and Menu and Cutscenes",
+    "path": "folders/Objects/UI and Menu and Cutscenes.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_save",

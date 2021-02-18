@@ -10,4 +10,6 @@ if invincible = 0 && other.ignorePlayer {
 	knockbackDir = point_direction(other.x,other.y,x,y);
 	
 	invincible = 60;
+	
+	BloodSplatter(x,y);
 }

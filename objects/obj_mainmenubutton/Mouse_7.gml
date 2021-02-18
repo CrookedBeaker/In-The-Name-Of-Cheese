@@ -7,7 +7,7 @@ switch ind {
 		Transition(rm_sewer_1,seq_fadeout,seq_fadein);
 		break;
 	case 1: //Load game
-		
+		LoadGame();
 		break;
 	case 2: //Display options
 		

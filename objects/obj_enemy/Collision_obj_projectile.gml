@@ -15,5 +15,7 @@ if invincible = 0 && other.pproj {
 	
 	if other.fire {burn = 180};
 	
+	BloodSplatter(other.x,other.y);
+	
 	instance_destroy(other);
 }

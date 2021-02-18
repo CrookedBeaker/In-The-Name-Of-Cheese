@@ -31,8 +31,10 @@ function SetMenu(ind) {
 			mLabel = "Menu";
 			break;
 		case 1: //Load
+			var s = global.mainHallReached ? "Main Hall" : "Area Start";
+			
 			MakeButton(0,"Quick Save",0);
-			MakeButton(1,"Room Start",32);
+			MakeButton(1,s,32);
 			MakeButton(2,"Back",64);
 			mLabel = "Load from...";
 			break;

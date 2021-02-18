@@ -29,3 +29,10 @@ function DropExp(val) {
 		val--;
 	}
 }
+
+//Blood Splattah!
+function BloodSplatter(x,y) {
+	repeat irandom_range(3,5) {
+		instance_create_depth(x,y,depth-5,obj_particle_blood);
+	}
+}
