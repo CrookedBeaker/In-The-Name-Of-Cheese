@@ -10,9 +10,9 @@ function LevelUp(){
 	global.pMPMax++;
 	
 	//A bit of random!
-	if global.pHPMax = global.pMPMax+3 {
+	if global.pHPMax >= global.pMPMax+3 {
 		global.pMPMax++;
-	} else if global.pMPMax = global.pHPMax+3 {
+	} else if global.pMPMax >= global.pHPMax+3 {
 		global.pHPMax++;
 	} else { //Give extra point to a random stat
 		if ran {

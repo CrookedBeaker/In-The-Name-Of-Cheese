@@ -1,7 +1,7 @@
 /// @description Setter ablaze!~
 
-if other.fire {
-	//Set sprite
+if other.fire && sprite_index != spr_torch_lit {
+	sprite_index = spr_torch_lit;
 	
 	global.pause = true;
 	global.pauseDisable = true;

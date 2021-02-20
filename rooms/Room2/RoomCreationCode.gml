@@ -1,0 +1,1 @@
+global.spells = [true,true,true,true,true];

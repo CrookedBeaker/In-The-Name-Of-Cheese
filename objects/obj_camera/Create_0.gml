@@ -6,9 +6,12 @@ camera = camera_create();
 //Movement
 follow = obj_player;
 
-if instance_exists(obj_player) {
-	x = obj_player.x;
-	y = obj_player.y;
+if instance_exists(obj_player) { //Start on the player
+	xReg = obj_player.x;
+	yReg = obj_player.y;
+	
+	x = xReg;
+	y = yReg;
 }
 
 //Make the camera

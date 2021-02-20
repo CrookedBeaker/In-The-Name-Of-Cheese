@@ -9,6 +9,7 @@ switch parent {
 		sprite_index = spr_dead_rat;
 		break;
 	case obj_e_guard:
+	case obj_e_bowman:
 		sprite_index = spr_dead_guard;
 		break;
 }

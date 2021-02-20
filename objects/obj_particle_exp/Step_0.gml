@@ -8,7 +8,11 @@ if knockback > 0 { //Spread out!
 } else { //Head for the player!
 	if instance_exists(obj_player) {
 		direction = point_direction(x,y,obj_player.x,obj_player.y);
-		motion_set(direction,5);
+		motion_set(direction,spd);
+		
+		spd += 1/30;
+	} else {
+		motion_set(direction,0);
 	}
 }
 

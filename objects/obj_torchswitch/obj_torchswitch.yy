@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_switch",
-    "path": "sprites/spr_switch/spr_switch.yy",
+    "name": "spr_torch",
+    "path": "sprites/spr_torch/spr_torch.yy",
   },
   "solid": false,
   "visible": true,

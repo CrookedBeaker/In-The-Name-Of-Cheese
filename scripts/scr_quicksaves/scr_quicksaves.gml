@@ -64,7 +64,9 @@ with obj_camera {
 		depth : depth,
 		bounds : bounds,
 		xTo : xTo,
+		xReg : xReg,
 		yTo : yTo,
+		yReg : yReg,
 		stop : stop
 	}
 	array_push(data,entity);
@@ -207,6 +209,16 @@ with obj_enemy {
 		entity.playerSpotted = playerSpotted;
 		entity.playerIgnore = playerIgnore;
 		entity.turnDir = turnDir;
+	}
+	
+	if entity.obj = "obj_e_bowman" {
+		entity.startDir = startDir;
+		entity.targetDir = targetDir;
+		entity.playerSpotted = playerSpotted;
+		entity.playerIgnore = playerIgnore;
+		entity.turnDir = turnDir;
+		entity.chaseDur = chaseDur;
+		entity.chaseDir = chaseDir;
 	}
 	
 	array_push(data,entity);
@@ -356,7 +368,9 @@ while array_length(loadData) > 0 {
 				case "obj_camera":
 					bounds = entity.bounds;
 					xTo = entity.xTo;
+					xReg = entity.xReg;
 					yTo = entity.yTo;
+					yReg = entity.yReg;
 					stop = entity.stop;
 					break;
 				case "obj_projectile":
@@ -421,6 +435,23 @@ while array_length(loadData) > 0 {
 					playerSpotted = entity.playerSpotted;
 					playerIgnore = entity.playerIgnore;
 					turnDir = entity.turnDir;
+					break;
+				case "obj_e_bowman": //Bowmen
+					state = entity.state;
+					hp = entity.hp;
+					knockback = entity.knockback;
+					knockbackDir = entity.knockbackDir;
+					invincible = entity.invincible;
+					idleWait = entity.idleWait;
+					burn = entity.burn;
+					stunned = entity.stunned;
+					startDir = entity.startDir;
+					targetDir = entity.targetDir;
+					playerSpotted = entity.playerSpotted;
+					playerIgnore = entity.playerIgnore;
+					turnDir = entity.turnDir;
+					chaseDur = entity.chaseDur;
+					chaseDir = entity.chaseDir;
 					break;
 				case "obj_corpse": //Dead Bodies
 					parent = entity.parent;

@@ -7,7 +7,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_collision",
+    "path": "objects/obj_collision/obj_collision.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
