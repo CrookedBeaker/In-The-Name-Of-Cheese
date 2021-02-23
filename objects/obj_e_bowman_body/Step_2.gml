@@ -68,4 +68,6 @@ if p.knockback = 0 { //Only change states
 	image_angle = p.image_angle;
 }
 
+} else {
+	image_speed = 0;
 }

@@ -12,7 +12,7 @@ image_index = !(state = "idle" || state = "turn");
 if instance_exists(obj_player) && !ignorePlayer {
 	pDir = point_direction(x,y,obj_player.x,obj_player.y);
 	
-	if !playerSpotted {playerSpotted = (abs(pDir-direction) < 30 && distance_to_object(obj_player) <= 320)};
+	if !playerSpotted {playerSpotted = (abs(pDir-direction) < 30 && distance_to_object(obj_player) <= 320 && !collision_line(x,y,obj_player.x,obj_player.y,obj_collision,0,0))};
 }
 
 //Handle active states
@@ -31,6 +31,7 @@ switch state {
 			state = playerSpotted ? "chase" : "turn";
 			
 			//Set the way they'll be moving
+			var tries = 0;
 			do {
 				if distance_to_object(obj_player) <= 160 { //Go off in a random direction if not near player
 					chaseDir = pDir+180+irandom_range(-90,90); //Random direction!
@@ -41,7 +42,13 @@ switch state {
 					chaseDir = pDir;
 					chaseDur = irandom_range(16,32);
 				}
-			} until (!collision_line(x,y,x+chaseDur*2*dcos(chaseDir),y+chaseDur*2*dcos(chaseDir),obj_collision,false,false));
+				
+				tries++;
+				if tries = 20 {
+					GoIdle(30);
+					break;
+				}
+			} until (!collision_line(x,y,x+chaseDur*2*dcos(chaseDir),y+chaseDur*2*dsin(chaseDir),obj_collision,false,false));
 		}
 		
 		break;

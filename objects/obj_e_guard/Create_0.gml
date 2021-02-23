@@ -3,6 +3,9 @@
 // Inherit the parent event
 event_inherited();
 
+direction = startDir;
+pDir = 0;
+
 //Set this instance as the parent obj for body and legs
 //if NoIdForP(obj_e_guard_body) { //Make a new one
 	body = instance_create_depth(x,y,depth+1,obj_e_guard_body);
@@ -35,9 +38,6 @@ if variable_instance_exists(id,"body_image_index") {
 
 spd = 0;
 dir = 0;
-
-direction = startDir;
-pDir = 0;
 
 if targetDir != -1 { //Protect against saving
 	targetDir = (irandom(1) = 0) ? startDir+45 : startDir-45;

@@ -3,7 +3,7 @@
 with other {
 	if !stunned {
 		state = "idle";
-		idleWait = 300;
+		idleWait = 360;
 		stunned = true;
 	}
 }

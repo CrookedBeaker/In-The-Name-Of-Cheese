@@ -19,7 +19,7 @@ if place_meeting(x+hspd,y,obj_collision) && place_meeting(x+hspd,yprevious,obj_c
 	obj.x = x;
 }
 
-if place_meeting(x,y+vspd,obj_collision) {
+if place_meeting(x,y+vspd,obj_collision) && place_meeting(xprevious,y+vspd,obj_collision) {
 	if place_meeting(x,y,obj_collision) {y = yprevious};
 	while !place_meeting(x,y+sign(vspd),obj_collision) {
 		y+=sign(vspd);
@@ -38,7 +38,7 @@ if place_meeting(x+hspd,y,obj_collisionhbox) && place_meeting(x+hspd,yprevious,o
 	obj.x = x;
 }
 
-if place_meeting(x,y+vspd,obj_collisionhbox) {
+if place_meeting(x,y+vspd,obj_collisionhbox) && place_meeting(xprevious,y+vspd,obj_collisionhbox) {
 	if place_meeting(x,y,obj_collisionhbox) {y = yprevious};
 	while !place_meeting(x,y+sign(vspd),obj_collisionhbox) {
 		y+=sign(vspd);

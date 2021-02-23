@@ -490,6 +490,7 @@ instance_create_depth(obj_camera.x,obj_camera.y,obj_camera.depth,obj_escmenu);
 } else { //No save file
 	
 	show_debug_message("No save file found.");
+	return false;
 	
 }
 

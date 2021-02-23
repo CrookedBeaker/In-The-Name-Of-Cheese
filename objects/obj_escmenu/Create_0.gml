@@ -52,3 +52,8 @@ function SetMenu(ind) {
 	
 	menuID = ind;
 }
+
+function ShowText(str) {
+	tAlpha = 1;
+	tLabel = str;
+}

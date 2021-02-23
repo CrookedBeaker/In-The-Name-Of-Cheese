@@ -16,7 +16,12 @@ switch menuID {
 				instance_destroy();
 				break;
 			case 1: //Quick Save
-				QuickSave();
+				if instance_exists(obj_player) {
+					QuickSave();
+					ShowText("Saved!");
+				} else {
+					ShowText("Must be alive to save.");
+				}
 				select = -1;
 				break;
 			case 2: //Load
@@ -34,7 +39,8 @@ switch menuID {
 		
 		switch select {
 			case 0: //QS
-				QuickLoad();
+				var i = QuickLoad();
+				if !i {ShowText("No save found.")}
 				select = -1;
 				SetMenu(0);
 				break;
@@ -72,4 +78,9 @@ switch menuID {
 		} else if select = 1 {
 			SetMenu(0);
 		}
+}
+
+//Make text disappear!
+if tAlpha > 0 {
+	tAlpha -= 1/180;
 }

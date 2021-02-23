@@ -35,6 +35,7 @@ function AddWallCollHBox(l,w,x,y) {
 function MakeProjectile(x,y,depth,dir,spd,dmg,sprite,fire) {
 	var inst = instance_create_depth(x,y,depth,obj_projectile);
 	inst.direction = dir;
+	inst.image_angle = dir;
 	inst.spd = spd;
 	inst.dmg = dmg;
 	inst.sprite_index = sprite;

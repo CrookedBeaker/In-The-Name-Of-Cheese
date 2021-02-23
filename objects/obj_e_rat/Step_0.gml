@@ -10,7 +10,7 @@ var pDir = 0;
 if instance_exists(obj_player) && !playerIgnore {
 	var pDir = point_direction(x,y,obj_player.x,obj_player.y);
 	
-	if !playerSpotted {playerSpotted = (abs(pDir-direction) < 30 && distance_to_object(obj_player) <= 128)};
+	if !playerSpotted {playerSpotted = (abs(pDir-direction) < 30 && distance_to_object(obj_player) <= 128 && !collision_line(x,y,obj_player.x,obj_player.y,obj_collision,0,0))};
 }
 
 //Handle active states

@@ -41,4 +41,6 @@ if p.knockback = 0 { //Only change states
 	}
 }
 
+} else {
+	image_speed = 0;
 }
