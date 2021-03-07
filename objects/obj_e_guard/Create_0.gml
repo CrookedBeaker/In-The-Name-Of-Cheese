@@ -4,6 +4,7 @@
 event_inherited();
 
 direction = startDir;
+image_angle = startDir;
 pDir = 0;
 
 //Set this instance as the parent obj for body and legs
@@ -11,6 +12,7 @@ pDir = 0;
 	body = instance_create_depth(x,y,depth+1,obj_e_guard_body);
 	body.p = id;
 	body.direction = direction;
+	body.image_angle = image_angle;
 //} else { //Retrieve existing
 //	body = GetIdForP(obj_e_guard_body);
 //}

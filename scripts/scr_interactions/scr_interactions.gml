@@ -111,6 +111,14 @@ function DropRan() {
 	}
 }
 
+function DropKey() {
+	if !instance_exists(obj_enemy) &&
+	  room = rm_wall_5 {
+		instance_create_depth(x,y,depth+5,obj_key);
+	}
+}
+
+//Shake the screen!!
 function Screenshake(dur,intensity) {
 	if instance_exists(obj_camera) { //Make sure you got a camera to work with
 		obj_camera.shakeDur = dur;

@@ -1,3 +1,3 @@
-/// @description Remove if claimed
+/// @description Remove if claimed, not loading
 
-if global.spells[spellID] instance_destroy();
+if global.spells[spellID] && spellID != 0 {instance_destroy()};

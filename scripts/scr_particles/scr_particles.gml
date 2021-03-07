@@ -17,10 +17,10 @@ function NumParticleGain(val,color) {
 //Send out an exp orbs
 function DropExp(val) {
 	//Big EXP
-	while val >= 10 {
+	while val >= 5 {
 		var inst = instance_create_depth(x,y,depth+1,obj_particle_exp);
-		inst.val = 10;
-		val-=10;
+		inst.val = 5;
+		val-=5;
 	}
 	
 	//Small EXP

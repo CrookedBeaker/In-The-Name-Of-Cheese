@@ -7,7 +7,7 @@ switch global.spellSelect {
 		break;
 	case 1:
 		cost = 3;
-		chargeMax = 90;
+		chargeMax = 20;
 		break;
 	case 2:
 		cost = 2;

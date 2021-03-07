@@ -9,7 +9,7 @@ with other {
 //Get hurt
 if invincible = 0 && !other.ignorePlayer && !blocked {
 	var c = IsCrit(); //Roll for a critical
-	var d = c ? other.atk*2 : other.atk;
+	var d = c ? other.atk+1 : other.atk;
 	global.pHP -= d;
 	NumParticle(d,c);
 	

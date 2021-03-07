@@ -67,3 +67,19 @@ function sh_restart(args) {
 	game_restart();
 	return "Game restarted."
 }
+
+function sh_checkGlobal(args) {
+	var g = variable_global_get(args[1]);
+	if g != undefined {
+		return args[1]+": "+string(g);
+	} else {
+		return "Unable to find variable.";
+	}
+}
+
+function sh_kill(args) {
+	with obj_enemy {
+		hp = 0;
+	}
+	return "Killed all enemies.";
+}

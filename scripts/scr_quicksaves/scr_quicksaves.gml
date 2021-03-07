@@ -174,6 +174,23 @@ with obj_focus {
 	array_push(data,entity);
 }
 
+//Spell orbs
+with obj_spellorb {
+	var entity = {
+		obj : object_get_name(object_index),
+		y : y,
+		x : x,
+		image_index : image_index,
+		sprite_index : sprite_index,
+		direction : direction,
+		depth : depth,
+		spellID : spellID,
+		anim : anim
+	}
+	show_debug_message(entity.obj);
+	array_push(data,entity);
+}
+
 //Oh god all the enemies
 with obj_enemy {
 	var entity = {
@@ -191,7 +208,8 @@ with obj_enemy {
 		invincible : invincible,
 		idleWait : idleWait,
 		burn : burn,
-		stunned : stunned
+		stunned : stunned,
+		oDir : oDir
 	}
 	
 	if entity.obj = "obj_e_rat" {
@@ -219,6 +237,15 @@ with obj_enemy {
 		entity.turnDir = turnDir;
 		entity.chaseDur = chaseDur;
 		entity.chaseDir = chaseDir;
+	}
+	
+	if entity.obj = "obj_e_soldier" {
+		entity.startDir = startDir;
+		entity.targetDir = targetDir;
+		entity.playerSpotted = playerSpotted;
+		entity.playerIgnore = playerIgnore;
+		entity.turnDir = turnDir;
+		entity.armor = armor;
 	}
 	
 	array_push(data,entity);
@@ -279,6 +306,7 @@ var entity = {
 	ATK : global.pATK,
 	spells : global.spells,
 	spellSelect : global.spellSelect,
+	keys : global.keys,
 	
 	rm : room
 }
@@ -328,6 +356,7 @@ with obj_elixir instance_destroy();
 with obj_switch instance_destroy();
 with obj_focus instance_destroy();
 with obj_corpse instance_destroy();
+with obj_spellorb instance_destroy();
 
 //Load it!
 var buffer = buffer_load("quicksave.save");
@@ -342,6 +371,7 @@ while array_length(loadData) > 0 {
 	
 	if entity.obj != "global" { //Load the entity
 		var inst = instance_create_depth(0,0,layer,asset_get_index(entity.obj));
+		show_debug_message(object_get_name(inst.object_index));
 		
 		with inst {
 			y = entity.y;
@@ -395,6 +425,10 @@ while array_length(loadData) > 0 {
 					swY = entity.swY;
 					//swIns = entity.swIns;
 					break;
+				case "obj_spellorb":
+					spellID = entity.spellID;
+					anim = entity.anim;
+					break;
 				case "obj_enemy":
 					state = entity.state;
 					hp = entity.hp;
@@ -404,6 +438,7 @@ while array_length(loadData) > 0 {
 					idleWait = entity.idleWait;
 					burn = entity.burn;
 					stunned = entity.stunned;
+					oDir = entity.oDir;
 					break;
 				case "obj_e_rat":
 					state = entity.state;
@@ -414,6 +449,7 @@ while array_length(loadData) > 0 {
 					idleWait = entity.idleWait;
 					burn = entity.burn;
 					stunned = entity.stunned;
+					oDir = entity.oDir;
 					spd = entity.spd;
 					turnSpeed = entity.turnSpeed;
 					chargeDur = entity.chargeDur;
@@ -430,6 +466,7 @@ while array_length(loadData) > 0 {
 					idleWait = entity.idleWait;
 					burn = entity.burn;
 					stunned = entity.stunned;
+					oDir = entity.oDir;
 					startDir = entity.startDir;
 					targetDir = entity.targetDir;
 					playerSpotted = entity.playerSpotted;
@@ -445,6 +482,7 @@ while array_length(loadData) > 0 {
 					idleWait = entity.idleWait;
 					burn = entity.burn;
 					stunned = entity.stunned;
+					oDir = entity.oDir;
 					startDir = entity.startDir;
 					targetDir = entity.targetDir;
 					playerSpotted = entity.playerSpotted;
@@ -452,6 +490,23 @@ while array_length(loadData) > 0 {
 					turnDir = entity.turnDir;
 					chaseDur = entity.chaseDur;
 					chaseDir = entity.chaseDir;
+					break;
+				case "obj_e_soldier": //Soldiers
+					state = entity.state;
+					hp = entity.hp;
+					knockback = entity.knockback;
+					knockbackDir = entity.knockbackDir;
+					invincible = entity.invincible;
+					idleWait = entity.idleWait;
+					burn = entity.burn;
+					stunned = entity.stunned;
+					oDir = entity.oDir;
+					startDir = entity.startDir;
+					targetDir = entity.targetDir;
+					playerSpotted = entity.playerSpotted;
+					playerIgnore = entity.playerIgnore;
+					turnDir = entity.turnDir;
+					armor = entity.armor;
 					break;
 				case "obj_corpse": //Dead Bodies
 					parent = entity.parent;
@@ -473,6 +528,8 @@ while array_length(loadData) > 0 {
 		
 		global.spells = entity.spells;
 		global.spellSelect = entity.spellSelect;
+		
+		global.keys = entity.keys;
 		
 		if entity.rm != room {
 			LoadRoom(entity.rm);

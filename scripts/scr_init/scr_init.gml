@@ -22,6 +22,8 @@ function SetDefaultGlobals() {
 	
 	global.mainHallReached = false;
 	global.loading = false;
+	
+	global.keys = [0,0,0,0];
 }
 
 SetDefaultGlobals();

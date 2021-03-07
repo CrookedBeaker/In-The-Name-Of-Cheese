@@ -6,12 +6,13 @@ if invincible > 0 {invincible--}
 if IsAttacked() {
 	
 	var c = IsCrit(); //Roll for a critical
-	var d = c ? global.pATK*2 : global.pATK;
+	var d = c ? global.pATK+1 : global.pATK;
 	hp -= d;
 	NumParticle(d,c);
 	
 	knockback = 20;
 	knockbackDir = point_direction(obj_player.x,obj_player.y,x,y);
+	oDir = direction;
 	
 	invincible = 60;
 	
@@ -31,6 +32,11 @@ if knockback > 0 {
 	knockback = lerp(knockback,0,0.2);
 	motion_set(knockbackDir,knockback);
 	image_speed = 0;
+	
+	//Correct the way the object is facing after getting knocked back
+	if knockback = 0 {
+		direction = oDir;
+	}
 	
 	//Leg stuff if they have it
 	spd = 0;
@@ -58,6 +64,7 @@ if hp <= 0 {
 	instance_destroy();
 	DropExp(expDrop);
 	DropRan();
+	DropKey();
 	
 	//Produce a dead body
 	var inst = instance_create_depth(x,y,depth+50,obj_corpse);

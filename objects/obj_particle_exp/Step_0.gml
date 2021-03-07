@@ -33,4 +33,4 @@ if place_meeting(x,y,obj_player) {
 	image_speed = 0;
 }
 
-sprite_index = (val >= 10) ? spr_exp_large : spr_exp_small;
+sprite_index = (val >= 5) ? spr_exp_large : spr_exp_small;

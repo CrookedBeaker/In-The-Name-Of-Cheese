@@ -29,6 +29,7 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"ignorePlayer","path":"objects/obj_damage/obj_damage.yy",},"objectId":{"name":"obj_damage","path":"objects/obj_damage/obj_damage.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"atk","path":"objects/obj_damage/obj_damage.yy",},"objectId":{"name":"obj_damage","path":"objects/obj_damage/obj_damage.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Spells",

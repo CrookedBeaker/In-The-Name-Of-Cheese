@@ -19,6 +19,12 @@ function SaveGame() {
 	ini_write_real("Spells","spell-3",global.spells[3]);
 	ini_write_real("Spells","spell-4",global.spells[4]);
 	
+	//Keys
+	ini_write_real("Keys","keys-0",global.keys[0]);
+	ini_write_real("Keys","keys-1",global.keys[1]);
+	ini_write_real("Keys","keys-2",global.keys[2]);
+	ini_write_real("Keys","keys-3",global.keys[3]);
+	
 	ini_close();
 	
 	//Enable loading your save file from esc menu
@@ -44,6 +50,12 @@ function LoadGame() {
 	global.spells[2] = ini_read_real("Spells","spell-2",false);
 	global.spells[3] = ini_read_real("Spells","spell-3",false);
 	global.spells[4] = ini_read_real("Spells","spell-4",false);
+	
+	//Keys
+	global.keys[0] = ini_read_real("Keys","keys-0",false);
+	global.keys[1] = ini_read_real("Keys","keys-1",false);
+	global.keys[2] = ini_read_real("Keys","keys-2",false);
+	global.keys[3] = ini_read_real("Keys","keys-3",false);
 	
 	//Unsaved global defaults
 	global.spellSelect = 0;

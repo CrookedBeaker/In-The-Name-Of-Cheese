@@ -8,6 +8,7 @@ if invincible = 0 && other.ignorePlayer {
 	
 	knockback = 20;
 	knockbackDir = point_direction(other.x,other.y,x,y);
+	oDir = direction;
 	
 	invincible = 60;
 	
