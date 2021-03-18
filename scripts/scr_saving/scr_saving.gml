@@ -66,3 +66,14 @@ function LoadGame() {
 	//Get outta here
 	Transition(rm_mainhall,seq_fadeout,seq_fadein);
 }
+
+function DeleteSaves() {
+	file_delete("MainHallSave.save");
+	file_delete("quicksave.save");
+	
+	show_debug_message("Save files deleted.");
+}
+
+function SaveExists() {
+	return (file_exists("MainHallSave.save") || file_exists("quicksave.save"))
+}

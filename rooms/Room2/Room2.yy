@@ -26,10 +26,9 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_elixir","path":"objects/obj_elixir/obj_elixir.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":512.0,"y":64.0,"resourceVersion":"1.0","name":"inst_70CB9D95","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_elixir","path":"objects/obj_elixir/obj_elixir.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":480.0,"y":64.0,"resourceVersion":"1.0","name":"inst_1A3CE067","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_potion","path":"objects/obj_potion/obj_potion.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":288.0,"resourceVersion":"1.0","name":"inst_F4A9FF5","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_e_soldier","path":"objects/obj_e_soldier/obj_e_soldier.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":672.0,"y":192.0,"resourceVersion":"1.0","name":"inst_76B9BB31","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
-            {"propertyId":{"name":"startDir","path":"objects/obj_e_soldier/obj_e_soldier.yy",},"objectId":{"name":"obj_e_soldier","path":"objects/obj_e_soldier/obj_e_soldier.yy",},"value":"180","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"obj_e_soldier","path":"objects/obj_e_soldier/obj_e_soldier.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-180.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":992.0,"y":512.0,"resourceVersion":"1.0","name":"inst_507F7F3A","tags":[],"resourceType":"GMRInstance",},
+            {"propertyId":{"name":"activeArea","path":"objects/obj_e_wizard/obj_e_wizard.yy",},"objectId":{"name":"obj_e_wizard","path":"objects/obj_e_wizard/obj_e_wizard.yy",},"value":"[640,32,1344,736]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"obj_e_wizard","path":"objects/obj_e_wizard/obj_e_wizard.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-64.0,"y":32.0,"resourceVersion":"1.0","name":"inst_B3612F0","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_collision","path":"objects/obj_collision/obj_collision.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":15.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":352.0,"resourceVersion":"1.0","name":"inst_67E45F01","tags":[],"resourceType":"GMRInstance",},
@@ -81,8 +80,7 @@
     {"name":"inst_70CB9D95","path":"rooms/Room2/Room2.yy",},
     {"name":"inst_1A3CE067","path":"rooms/Room2/Room2.yy",},
     {"name":"inst_F4A9FF5","path":"rooms/Room2/Room2.yy",},
-    {"name":"inst_76B9BB31","path":"rooms/Room2/Room2.yy",},
-    {"name":"inst_507F7F3A","path":"rooms/Room2/Room2.yy",},
+    {"name":"inst_B3612F0","path":"rooms/Room2/Room2.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

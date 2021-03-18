@@ -42,7 +42,7 @@ switch menuID {
 				var i = QuickLoad();
 				if !i {ShowText("No save found.")}
 				select = -1;
-				SetMenu(0);
+				//SetMenu(0);
 				break;
 			case 1: //Area Start / Main Hall
 				if global.mainHallReached {
