@@ -248,6 +248,11 @@ with obj_enemy {
 		entity.armor = armor;
 	}
 	
+	if entity.obj = "obj_e_wizard" {
+		entity.activeArea = activeArea;
+		entity.chargeDur = chargeDur;
+	}
+	
 	array_push(data,entity);
 }
 
@@ -507,6 +512,19 @@ while array_length(loadData) > 0 {
 					playerIgnore = entity.playerIgnore;
 					turnDir = entity.turnDir;
 					armor = entity.armor;
+					break;
+				case "obj_e_wizard":
+					state = entity.state;
+					hp = entity.hp;
+					knockback = entity.knockback;
+					knockbackDir = entity.knockbackDir;
+					invincible = entity.invincible;
+					idleWait = entity.idleWait;
+					burn = entity.burn;
+					stunned = entity.stunned;
+					oDir = entity.oDir;
+					activeArea = entity.activeArea;
+					chargeDur = entity.chargeDur;
 					break;
 				case "obj_corpse": //Dead Bodies
 					parent = entity.parent;

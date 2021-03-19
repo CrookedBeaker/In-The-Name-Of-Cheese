@@ -29,6 +29,8 @@ if IsAttacked() {
 
 //Getting knocked back, turning with direction
 if knockback > 0 {
+	idleWait++; //Stop decrementing idleWait
+	
 	knockback = lerp(knockback,0,0.2);
 	motion_set(knockbackDir,knockback);
 	image_speed = 0;
