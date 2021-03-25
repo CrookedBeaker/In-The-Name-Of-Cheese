@@ -4,7 +4,7 @@
 if invincible = 0 && other.pproj {
 	
 	var c = IsCrit(); //Roll for a critical
-	var d = c ? other.dmg*2 : other.dmg;
+	var d = c ? other.dmg+1 : other.dmg;
 	hp -= d;
 	NumParticle(d,c);
 	

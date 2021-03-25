@@ -32,6 +32,8 @@ function SaveGame() {
 }
 
 function LoadGame() {
+	if file_exists("MainHallSave.save") {
+	
 	ini_open("MainHallSave.save");
 	
 	//Stats
@@ -65,6 +67,8 @@ function LoadGame() {
 	
 	//Get outta here
 	Transition(rm_mainhall,seq_fadeout,seq_fadein);
+	
+	}
 }
 
 function DeleteSaves() {

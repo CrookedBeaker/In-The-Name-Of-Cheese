@@ -15,14 +15,18 @@ switch parent {
 	case obj_e_soldier:
 		sprite_index = spr_dead_soldier;
 		break;
+	case obj_e_wizard:
+		sprite_index = spr_dead_wizard;
+		break;
 	default:
 		sprite_index = spr_dead_armor;
 		break;
 }
 
 //Make sure you're not in any walls
-while place_meeting(x,y,obj_collision) {
+while place_meeting(x,y,obj_collision) && tries != 0 {
 	image_angle++;
+	tries--;
 }
 
 direction = image_angle;

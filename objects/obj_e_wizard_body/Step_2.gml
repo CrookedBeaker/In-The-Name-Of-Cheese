@@ -40,7 +40,7 @@ if p.knockback = 0 { //Only change states
 					depth-1,
 					point_direction(x+xMod,y+yMod,obj_player.x,obj_player.y),
 					5,
-					2,
+					1+atkMod,
 					spr_fire,
 					true
 				);

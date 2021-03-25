@@ -64,7 +64,12 @@ if global.pEXP < 10 {
 } else {
 	var stringEXP = string(global.pEXP);
 }
-stringEXP += (global.pEXPMax<100) ? "/0"+string(global.pEXPMax) : "/"+string(global.pEXPMax);
+
+if global.pLVL < 10 {
+	stringEXP += (global.pEXPMax<100) ? "/0"+string(global.pEXPMax) : "/"+string(global.pEXPMax);
+} else {
+	stringEXP += "/MAX"
+}
 
 var mouseIsInTheWay = instance_exists(obj_player) ? (mouse_x < (x-144) && mouse_y > (y+64)) || (obj_player.x < (x-144) && obj_player.y > (y+64)) : 0;
 

@@ -6,7 +6,7 @@ if invincible = 0 && other.ignorePlayer {
 	if other.object_index != obj_bolt {
 		
 		if !armor { //Armor disabled
-			var d = c ? other.atk*2 : other.atk;
+			var d = c ? other.atk+1 : other.atk;
 			hp -= d;
 			NumParticle(d,c);
 			
@@ -23,6 +23,7 @@ if invincible = 0 && other.ignorePlayer {
 			
 			knockback = 10;
 			knockbackDir = point_direction(other.x,other.y,x,y);
+			oDir = direction;
 			
 			invincible = 60;
 		}
@@ -33,6 +34,7 @@ if invincible = 0 && other.ignorePlayer {
 		
 		knockback = 20;
 		knockbackDir = point_direction(other.x,other.y,x,y);
+		oDir = direction;
 		
 		invincible = 60;
 		

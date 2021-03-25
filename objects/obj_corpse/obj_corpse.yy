@@ -24,6 +24,7 @@
     {"varType":5,"value":"noone","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[
         "GMObject",
       ],"resourceVersion":"1.0","name":"parent","tags":[],"resourceType":"GMObjectProperty",},
+    {"varType":0,"value":"360","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"tries","tags":[],"resourceType":"GMObjectProperty",},
   ],
   "overriddenProperties": [],
   "parent": {

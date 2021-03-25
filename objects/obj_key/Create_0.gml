@@ -7,4 +7,7 @@ switch room {
 	case rm_dungeon_3:
 		keyID = 1;
 		break;
+	case rm_library_4:
+		keyID = 2;
+		break;
 }

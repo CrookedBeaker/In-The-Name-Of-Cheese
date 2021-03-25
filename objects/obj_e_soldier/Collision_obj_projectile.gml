@@ -6,7 +6,7 @@ if invincible = 0 && other.pproj {
 	var c = IsCrit(); //Roll for a critical
 	
 	if !armor { //Armor disabled
-		var d = c ? other.dmg*2 : other.dmg;
+		var d = c ? other.dmg+1 : other.dmg;
 		hp -= d;
 		NumParticle(d,c);
 		
@@ -25,6 +25,7 @@ if invincible = 0 && other.pproj {
 		
 		knockback = 10;
 		knockbackDir = point_direction(other.x,other.y,x,y);
+		oDir = direction;
 		
 		invincible = 60;
 	}

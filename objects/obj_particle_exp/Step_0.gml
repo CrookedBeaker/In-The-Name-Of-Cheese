@@ -21,7 +21,7 @@ if place_meeting(x,y,obj_player) {
 	instance_destroy();
 	global.pEXP += val;
 	
-	if global.pEXP >= global.pEXPMax {
+	if global.pEXP >= global.pEXPMax && global.pLVL < 10 {
 		LevelUp();
 	} else {
 		NumParticleGain(val,c_teal);

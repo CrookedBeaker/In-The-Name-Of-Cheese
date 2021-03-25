@@ -25,4 +25,14 @@ switch room {
 	case rm_dungeon_3:
 		sprite_index = spr_gate_dungeon;
 		break;
+	case rm_library_1: //Library
+	case rm_library_2:
+	case rm_library_3:
+	case rm_library_4:
+		sprite_index = spr_gate_library;
+		break;
+	case rm_barracks_1: //Barracks
+	case rm_barracks_2:
+		sprite_index = spr_gate_barracks;
+		break;
 }
