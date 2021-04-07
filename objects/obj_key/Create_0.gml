@@ -10,4 +10,6 @@ switch room {
 	case rm_library_4:
 		keyID = 2;
 		break;
+	case rm_barracks_4:
+		keyID = 3;
 }

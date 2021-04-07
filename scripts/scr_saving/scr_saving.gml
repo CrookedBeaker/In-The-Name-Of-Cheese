@@ -8,9 +8,9 @@ function SaveGame() {
 	ini_write_real("Stats","hp",global.pHPMax);
 	ini_write_real("Stats","mp",global.pMPMax);
 	ini_write_real("Stats","exp",global.pEXP);
-	ini_write_real("Stats","exp-max",global.pEXPMax);
+	//ini_write_real("Stats","exp-max",global.pEXPMax);
 	ini_write_real("Stats","lvl",global.pLVL);
-	ini_write_real("Stats","atk",global.pATK);
+	//ini_write_real("Stats","atk",global.pATK);
 	
 	//Spells
 	ini_write_real("Spells","spell-0",global.spells[0]);
@@ -42,9 +42,12 @@ function LoadGame() {
 	global.pMPMax = ini_read_real("Stats","mp",5);
 	global.pMP = global.pMPMax;
 	global.pEXP = ini_read_real("Stats","exp",0);
-	global.pEXPMax = ini_read_real("Stats","exp-max",0);
+	//global.pEXPMax = ini_read_real("Stats","exp-max",0);
 	global.pLVL = ini_read_real("Stats","lvl",1);
-	global.pATK = ini_read_real("Stats","atk",1);
+	//global.pATK = ini_read_real("Stats","atk",1);
+	
+	global.pEXPMax = global.pLVL*20;
+	global.pATK = ceil(global.pLVL/2);
 	
 	//Spells
 	global.spells[0] = ini_read_real("Spells","spell-0",false);

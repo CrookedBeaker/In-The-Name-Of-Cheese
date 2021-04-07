@@ -5,3 +5,5 @@ if room = rm_title { //Message the title sub-menu
 } else { //Message the pause menu
 	obj_escmenu.select = ind;
 }
+
+audio_play_sound(snd_button,10,false);

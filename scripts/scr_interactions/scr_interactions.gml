@@ -113,7 +113,7 @@ function DropRan() {
 
 function DropKey() {
 	if !instance_exists(obj_enemy) &&
-	  room = rm_wall_5 {
+	  (room = rm_wall_5 || room = rm_barracks_4) {
 		instance_create_depth(x,y,depth+5,obj_key);
 	}
 }
@@ -128,6 +128,11 @@ function Screenshake(dur,intensity) {
 	} else {
 		return false; //Failed!
 	}
+}
+
+//Check for all keys
+function AllKeys() {
+	return (global.keys[0] && global.keys[1] && global.keys[2] && global.keys[3]);
 }
 
 /*

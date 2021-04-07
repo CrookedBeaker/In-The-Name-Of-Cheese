@@ -14,6 +14,7 @@ if instance_exists(obj_player) {
 }
 
 lifetime--;
+if lifetime = 180 {sprite_index = spr_shield_warning}
 if lifetime = 0 {sprite_index = spr_shield_out}
 
 }

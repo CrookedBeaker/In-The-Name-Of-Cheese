@@ -1,0 +1,1 @@
+if AllKeys() instance_destroy();

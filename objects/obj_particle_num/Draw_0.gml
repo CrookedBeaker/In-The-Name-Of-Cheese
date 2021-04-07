@@ -7,7 +7,7 @@ draw_set_color(c_dkgray);
 
 draw_text_transformed(x+2,y+2,string(val),xScale,yScale,0);
 
-var c = crit ? c_yellow : c_maroon;
+var c = crit ? c_yellow : c_red;
 draw_set_color(c);
 
 draw_text_transformed(x,y,string(val),xScale,yScale,0);
