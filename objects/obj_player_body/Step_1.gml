@@ -18,6 +18,6 @@ switch global.spellSelect {
 		chargeMax = 180;
 		break;
 	case 4:
-		cost = 10;
-		chargeMax = 300;	
+		cost = clamp(global.pMP,1,clamp(global.pHPMax-global.pHP,1,10));
+		chargeMax = 60;	
 }

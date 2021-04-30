@@ -16,9 +16,13 @@ switch menuID {
 				instance_destroy();
 				break;
 			case 1: //Quick Save
-				if instance_exists(obj_player) {
-					QuickSave();
-					ShowText("Saved!");
+				if instance_exists(obj_player) { //Can't be dead
+					if room != rm_dhall { //Can't be fighting the final boss
+						QuickSave();
+						ShowText("Saved!");
+					} else {
+						ShowText("You can't save during this fight.");
+					}
 				} else {
 					ShowText("Must be alive to save.");
 				}
@@ -38,11 +42,16 @@ switch menuID {
 	case 1: //Load
 		
 		switch select {
-			case 0: //QS
-				var i = QuickLoad();
-				if !i {ShowText("No save found.")}
-				select = -1;
-				//SetMenu(0);
+			case 0: //QS / Restart fight
+				if room != rm_dhall { //Load quick save
+					var i = QuickLoad();
+					if !i {ShowText("No save found.")}
+					select = -1;
+				} else { //Restart the finall boss
+					LoadGameFR();
+					instance_destroy();
+				}
+				
 				break;
 			case 1: //Area Start / Main Hall
 				if global.mainHallReached {

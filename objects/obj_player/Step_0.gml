@@ -82,6 +82,10 @@ if global.pHP <= 0 {
 	instance_destroy(obj_player_legs);
 	DropExp(global.pEXP);
 	
+	if !global.muteSound {
+		audio_play_sound(snd_death,10,false);
+	}
+	
 	//Produce a dead body
 	var inst = instance_create_depth(x,y,depth+50,obj_corpse);
 	inst.parent = object_index;

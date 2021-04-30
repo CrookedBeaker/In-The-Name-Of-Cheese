@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f2d3fa9b-d8fe-4eeb-9664-17c71bad02ae","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Sewer End",
     "path": "folders/Sprites/Title screen and cutscenes/Sewer End.yy",

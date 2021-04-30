@@ -6,4 +6,7 @@ if room = rm_title { //Message the title sub-menu
 	obj_escmenu.select = ind;
 }
 
-audio_play_sound(snd_button,10,false);
+if !global.muteSound {
+	var s = back ? snd_button_back : snd_button_confirm;
+	audio_play_sound(s,10,false);
+}

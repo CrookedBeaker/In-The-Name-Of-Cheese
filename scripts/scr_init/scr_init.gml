@@ -24,6 +24,9 @@ function SetDefaultGlobals() {
 	global.loading = false;
 	
 	global.keys = [0,0,0,0];
+	
+	global.muteSound = false;
+	global.muteMusic = false;
 }
 
 SetDefaultGlobals();

@@ -22,6 +22,6 @@ switch ind {
 		game_end();
 }
 
-audio_play_sound(snd_button,10,false);
+audio_play_sound(snd_button_confirm,10,false);
 
 }

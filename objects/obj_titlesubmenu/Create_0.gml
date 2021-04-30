@@ -2,10 +2,11 @@
 
 global.pause = true;
 
-function MakeButton(ind,label,yPos) {
+function MakeButton(ind,label,yPos,back) {
 	var inst = instance_create_depth(x,y-49+yPos,depth-1,obj_menubutton);
 	inst.ind = ind;
 	inst.label = label;
+	inst.back = back;
 }
 
 function NukeButtons() {
@@ -22,15 +23,15 @@ function SetMenu(ind) {
 	//Make some new ones based on the menu id
 	switch ind {
 		case 0: //New Game
-			MakeButton(0,"Proceed",64);
-			MakeButton(1,"Cancel",96);
+			MakeButton(0,"Proceed",64,false);
+			MakeButton(1,"Cancel",96,true);
 			mLabel = "Warning!";
 			sLabel = "Starting a new game\nwill delete existing\nsave data."
 			break;
 		case 1: //Options
-			MakeButton(0,"Mute Sound",0);
-			MakeButton(1,"Mute Music",32);
-			MakeButton(2,"Close",64);
+			MakeButton(0,"Mute Sound",0,false);
+			MakeButton(1,"Mute Music",32,false);
+			MakeButton(2,"Close",64,true);
 			mLabel = "Options";
 			break;
 	}

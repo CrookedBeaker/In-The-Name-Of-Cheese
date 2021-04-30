@@ -60,6 +60,10 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 		with obj_player {
 			knockback = 20;
 			knockbackDir = point_direction(other.x,other.y,x,y);
+			
+			if !global.muteSound {
+				audio_play_sound(snd_shieldhit,10,false);
+			}
 		}
 	}
 }

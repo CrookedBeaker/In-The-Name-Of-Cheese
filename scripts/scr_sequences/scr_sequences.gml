@@ -13,3 +13,9 @@ function IntroSkip(){
 function SEEnd(){
 	Transition(rm_save,seq_fadeout,seq_fadein);
 }
+
+//Dining Hall
+
+function DHEnd(){
+	Transition(rm_dhall,seq_fadeout,seq_fadein);
+}

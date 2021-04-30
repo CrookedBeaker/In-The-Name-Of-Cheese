@@ -79,7 +79,7 @@ function CastSpell() {
 			break;
 		case 4: //Don't die
 			instance_create_depth(x,y,depth-10,obj_heal);
-			global.pHP = clamp(global.pHP+10,0,global.pHPMax);
+			global.pHP = clamp(global.pHP+clamp(global.pMP,1,10),0,global.pHPMax);
 	}
 }
 

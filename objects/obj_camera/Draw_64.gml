@@ -30,7 +30,7 @@ if global.spells[0] {
 			mpCost = "5";
 			break;
 		case 4:
-			mpCost = "10";
+			mpCost = string(clamp(global.pMP,1,clamp(global.pHPMax-global.pHP,1,10)));
 			break;
 	}
 	
