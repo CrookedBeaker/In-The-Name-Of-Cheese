@@ -7,6 +7,10 @@ if !attacking {
 		image_index = 0;
 		sprite_index = spr_player_body_stab;
 		attacking = true;
+		
+		if !global.muteSound { //Play us a sound!
+			audio_play_sound(snd_stab,10,false);
+		}
 	} else if mouse_check_button_pressed(mb_right) && global.pMP >= cost && global.spells[global.spellSelect] && !(global.spellSelect = 4 && global.pHP = global.pHPMax) {
 		sprite_index = spr_player_body_charge;
 		attacking = true;

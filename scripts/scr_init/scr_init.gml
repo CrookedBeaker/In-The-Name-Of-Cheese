@@ -27,6 +27,8 @@ function SetDefaultGlobals() {
 	
 	global.muteSound = false;
 	global.muteMusic = false;
+	
+	global.transition = false;
 }
 
 SetDefaultGlobals();

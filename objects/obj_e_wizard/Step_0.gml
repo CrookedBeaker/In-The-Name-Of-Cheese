@@ -34,7 +34,7 @@ switch state {
 		var targX = 0;
 		var targY = 0;
 		
-		while (tries < 20 && (place_meeting(targX,targY,obj_collision) || point_distance(targX,targY,obj_player.x,obj_player.y) < 96 || point_distance(targX,targY,obj_player.x,obj_player.y) > 320)) {
+		while (tries < 20 && (place_meeting(targX,targY,obj_collision) || place_meeting(targX,targY,obj_enemy) || point_distance(targX,targY,obj_player.x,obj_player.y) < 96 || point_distance(targX,targY,obj_player.x,obj_player.y) > 320)) {
 			targX = irandom_range(activeArea[0],activeArea[2]);
 			targY = irandom_range(activeArea[1],activeArea[3]);
 			tries++;

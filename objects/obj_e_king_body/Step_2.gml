@@ -21,7 +21,7 @@ switch state {
 		break;
 	case "swing":
 		sprite_index = spr_king_body_swing;
-		mask_index = sprite_index;
+		mask_index = sprite_index; //Set hitbox woo
 		//direction = obj_e_king.direction; //WHACK
 }
 

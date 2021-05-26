@@ -51,10 +51,12 @@ if p.knockback = 0 { //Only change states
 	
 	//Rotate
 	//image_angle = direction;
-} else { //Once attacked, revert to hiding state
-	image_speed = 0;
-	state = "hide";
-	p.state = "hide";
+} else { //Once attacked, revert to hiding state if not stunned
+	if !p.stunned {
+		image_speed = 0;
+		state = "hide";
+		p.state = "hide";
+	}
 }
 
 } else {

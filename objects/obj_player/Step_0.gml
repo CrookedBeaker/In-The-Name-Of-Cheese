@@ -90,6 +90,9 @@ if global.pHP <= 0 {
 	var inst = instance_create_depth(x,y,depth+50,obj_corpse);
 	inst.parent = object_index;
 	inst.image_angle = knockbackDir-90;
+	
+	//Dead!
+	instance_create_depth(obj_camera.x,obj_camera.y-32,-998,obj_death);
 }
 
 }

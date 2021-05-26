@@ -31,4 +31,8 @@ if invincible = 0 && other.pproj {
 	}
 	
 	instance_destroy(other);
+	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_enemy_hit,10,false);
+	}
 }

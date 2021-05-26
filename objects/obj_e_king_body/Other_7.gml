@@ -10,3 +10,8 @@ if state = "slam" {
 	obj_e_king.summon = 1;
 	state = "idle";
 }
+
+if state = "swing" {
+	obj_e_king.state = "slam";
+	state = "slam";
+}

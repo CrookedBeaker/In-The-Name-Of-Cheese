@@ -10,7 +10,7 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 	var c = IsCrit(); //Roll for a critical
 	var d = abs(image_angle-obj_player_body.direction); //Grab the player's direction and compare it to your own
 	
-	if (d < 150 || d > 210) { //Attack lands (not shielded)
+	if (d < 150 || d > 210 || stunned) { //Attack lands (not shielded, stunned)
 	
 	if !armor { //Unarmored
 	
@@ -45,7 +45,7 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 		invincible = 60;
 		
 		if (d <= 50 || d >= 310) { //Remove armor with a successful hit to the back!
-			GoIdle(30);
+			if !stunned {GoIdle(30)}
 			image_index = 2;
 			armor = false;
 			

@@ -17,4 +17,8 @@ if invincible = 0 && !other.pproj {
 	
 	//Screenshake, baby!
 	Screenshake(10,5);
+	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_damage,10,false);
+	}
 }

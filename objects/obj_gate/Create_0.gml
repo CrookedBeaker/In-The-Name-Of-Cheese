@@ -9,6 +9,10 @@ function activate() { //Override!
 	image_index++;
 	active = false;
 	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_gate,10,false);
+	}
+	
 	Screenshake(20,8);
 }
 

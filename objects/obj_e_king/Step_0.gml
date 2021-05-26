@@ -66,7 +66,7 @@ if burn != 0 {
 
 //Death (sorta, just go to cutscene)
 if hp <= 0 {
-	Transition(rm_intro,seq_rhombout,seq_rhombin);
+	Transition(rm_ending,seq_rhombout,seq_rhombin);
 }
 
 //Idle waiting
@@ -80,15 +80,17 @@ if idleWait != 0 {
 if instance_exists(obj_player) {direction = point_direction(x,y,obj_player.x,obj_player.y)+90};
 image_angle = direction;
 
-if (distance_to_object(obj_player) < 128 || distance_to_object(obj_projectile) < 128) && !instance_exists(obj_kingshield) && vuln = 0 {
+if (distance_to_object(obj_player) < 128 || distance_to_object(obj_projectile) < 128) && !instance_exists(obj_kingshield) && vuln = 0 && state != "swing" {
 	SummonShield();
 	vuln = 30;
 }
 
 //Handle vulnerability
-if vuln != 0 {
+if vuln > 0 && distance_to_object(obj_player) < 128 && !(instance_exists(obj_e_guard) || instance_exists(obj_e_soldier) || instance_exists(obj_e_bowman) || instance_exists(obj_e_wizard)) {
 	vuln--;
-	if vuln = 0 {state = "slam"};
+	if vuln = 0 {
+		state = instance_exists(obj_kingshield) ? "slam" : "swing"; //Skip the swing in the first wave
+	}
 }
 
 //Summon enemies

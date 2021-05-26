@@ -29,9 +29,12 @@ function SetMenu(ind) {
 			sLabel = "Starting a new game\nwill delete existing\nsave data."
 			break;
 		case 1: //Options
-			MakeButton(0,"Mute Sound",0,false);
-			MakeButton(1,"Mute Music",32,false);
-			MakeButton(2,"Close",64,true);
+			var s = global.muteSound ? "Unmute Snd." : "Mute Sound";
+			var m = global.muteMusic ? "Unmute Mus." : "Mute Music";
+			
+			MakeButton(0,s,0,false);
+			MakeButton(1,m,32,false);
+			MakeButton(2,"Back",64,true);
 			mLabel = "Options";
 			break;
 	}

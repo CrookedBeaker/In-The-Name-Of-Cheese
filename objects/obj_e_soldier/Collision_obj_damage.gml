@@ -27,6 +27,10 @@ if invincible = 0 && other.ignorePlayer {
 			
 			invincible = 60;
 		}
+		
+		if !global.muteSound { //Play us a sound!
+			audio_play_sound(snd_enemy_hit,10,false);
+		}
 	
 	} else { //Get struck!
 		hp -= 3;

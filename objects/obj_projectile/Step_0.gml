@@ -4,7 +4,7 @@ if !global.pause {
 	motion_set(direction,spd);
 } else {
 	image_speed = 0;
-	motion_set(direction,spd);
+	motion_set(direction,0);
 }
 
 image_angle = direction;

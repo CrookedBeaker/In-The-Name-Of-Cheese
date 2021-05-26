@@ -19,3 +19,9 @@ function SEEnd(){
 function DHEnd(){
 	Transition(rm_dhall,seq_fadeout,seq_fadein);
 }
+
+//Ending
+
+function RollCredits(){
+	Transition(rm_credits,seq_fadeout,seq_fadein);
+}

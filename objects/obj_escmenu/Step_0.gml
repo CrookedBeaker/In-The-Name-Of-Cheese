@@ -47,7 +47,7 @@ switch menuID {
 					var i = QuickLoad();
 					if !i {ShowText("No save found.")}
 					select = -1;
-				} else { //Restart the finall boss
+				} else { //Restart the final boss
 					LoadGameFR();
 					instance_destroy();
 				}
@@ -71,6 +71,9 @@ switch menuID {
 		
 		switch select {
 			case 0: //M. Sound
+				global.muteSound = !global.muteSound;
+				SetMenu(2); //Refresh the list
+				break;
 			case 1: //M. Music
 				//Will do later
 				break;

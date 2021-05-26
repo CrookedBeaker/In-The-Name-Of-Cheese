@@ -19,4 +19,8 @@ if invincible = 0 && other.pproj {
 	BloodSplatter(other.x,other.y);
 	
 	instance_destroy(other);
+	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_enemy_hit,10,false);
+	}
 }

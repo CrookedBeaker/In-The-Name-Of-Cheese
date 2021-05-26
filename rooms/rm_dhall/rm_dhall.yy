@@ -29,7 +29,6 @@
             {"propertyId":{"name":"label","path":"objects/obj_header/obj_header.yy",},"objectId":{"name":"obj_header","path":"objects/obj_header/obj_header.yy",},"value":"Dining Hall","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"obj_header","path":"objects/obj_header/obj_header.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":0.0,"resourceVersion":"1.0","name":"inst_352AB162","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_e_king","path":"objects/obj_e_king/obj_e_king.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":160.0,"resourceVersion":"1.0","name":"inst_50893D25","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"obj_e_bowman","path":"objects/obj_e_bowman/obj_e_bowman.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":576.0,"y":208.0,"resourceVersion":"1.0","name":"inst_47BA3C4A","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":16,"layers":[],"hierarchyFrozen":false,"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_throne","path":"objects/obj_throne/obj_throne.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":384.0,"y":160.0,"resourceVersion":"1.0","name":"inst_1D8DF133","tags":[],"resourceType":"GMRInstance",},
@@ -158,7 +157,6 @@
     {"name":"inst_5CD7F2BD","path":"rooms/rm_dhall/rm_dhall.yy",},
     {"name":"inst_50893D25","path":"rooms/rm_dhall/rm_dhall.yy",},
     {"name":"inst_1D8DF133","path":"rooms/rm_dhall/rm_dhall.yy",},
-    {"name":"inst_47BA3C4A","path":"rooms/rm_dhall/rm_dhall.yy",},
     {"name":"inst_27177636","path":"rooms/rm_dhall/rm_dhall.yy",},
   ],
   "inheritCreationOrder": false,

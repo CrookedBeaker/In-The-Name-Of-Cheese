@@ -9,5 +9,3 @@ if !global.pause {
 }
 
 draw_self();
-
-if burn > 0 {draw_sprite(spr_burning,floor(burn/10),x,y)}

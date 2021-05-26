@@ -25,6 +25,10 @@ if IsAttacked() {
 		
 		BloodSplatter(x+xMod,y+yMod);
 	}
+	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_enemy_hit,10,false);
+	}
 }
 
 //Getting knocked back, turning with direction
@@ -67,6 +71,10 @@ if hp <= 0 {
 	DropExp(expDrop);
 	DropRan();
 	DropKey();
+	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_enemy_death,10,false);
+	}
 	
 	//Produce a dead body
 	var inst = instance_create_depth(x,y,depth+50,obj_corpse);

@@ -11,9 +11,7 @@ image_speed = 1;
 if p.knockback = 0 { //Only change states 
 	switch state {
 		case "idle":
-			if !instance_exists(obj_player) {
-				sprite_index = p.armor ? spr_e_armor_body_idle : spr_e_soldier_body_idle;
-			}
+			sprite_index = p.armor ? spr_e_armor_body_idle : spr_e_soldier_body_idle;
 			mask_index = spr_pix; //Remove hitbox woo
 			direction = p.direction;
 			break;

@@ -16,6 +16,7 @@ switch menuID {
 				SetDefaultGlobals();
 				Transition(rm_sewer_1,seq_fadeout,seq_fadein);
 				DeleteSaves();
+				instance_destroy();
 				break;
 			case 1: //Destroy
 				instance_destroy();
@@ -27,13 +28,16 @@ switch menuID {
 		
 		switch select {
 			case 0: //M. Sound
+				global.muteSound = !global.muteSound;
+				SetMenu(1); //Refresh the list
+				break;
 			case 1: //M. Music
 				//Will do later
 				break;
-			case 2 : //Destroy
+			case 2 : //Back
 				instance_destroy();
-				break;
 		}
+		break;
 		
 }
 

@@ -362,6 +362,7 @@ with obj_switch instance_destroy();
 with obj_focus instance_destroy();
 with obj_corpse instance_destroy();
 with obj_spellorb instance_destroy();
+with obj_death instance_destroy(); //So it doesn't stick around if loading the same room
 
 //Load it!
 var buffer = buffer_load("quicksave.save");

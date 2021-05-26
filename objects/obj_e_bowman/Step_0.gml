@@ -93,8 +93,8 @@ switch state {
 		//Wait for the body to finish attacking
 }
 
-} else { //Reset movement on hit
-	GoIdle(1);
+} else { //Reset movement on hit, but not when stunned
+	if !stunned {GoIdle(1)}
 }
 
 //If hit, know the player is there, regardless of knockback

@@ -6,6 +6,8 @@
 //	image_alpha = 1;
 //}
 
+if obj_player.burn > 0 {draw_sprite(spr_burning,floor(obj_player.burn/10),x,y)}
+
 if sprite_index != -1 {draw_self()};
 
 //Charging bar
