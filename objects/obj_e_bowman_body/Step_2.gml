@@ -49,6 +49,10 @@ if p.knockback = 0 { //Only change states
 				);
 				
 				p.shot = true;
+				
+				if (!global.muteSound && !audio_is_playing(snd_bow)) {
+					audio_play_sound(snd_bow,10,false);
+				}
 			}
 	}
 	

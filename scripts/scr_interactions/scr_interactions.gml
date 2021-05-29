@@ -72,6 +72,11 @@ function CastSpell() {
 		case 2: //Thundeirr!
 			var inst = instance_create_depth(x+xMod,y+yMod,depth-10,obj_bolt);
 			inst.image_angle = point_direction(x+xMod,y+yMod,mouse_x,mouse_y);
+			
+			if (!global.muteSound && !audio_is_playing(snd_bolt)) {
+				audio_play_sound(snd_bolt,10,false);
+			}
+			
 			break;
 		case 3: //Sheeld
 			var inst = instance_create_depth(x+xMod,y+yMod,depth,obj_shield);
@@ -80,6 +85,10 @@ function CastSpell() {
 		case 4: //Don't die
 			instance_create_depth(x,y,depth-10,obj_heal);
 			global.pHP = clamp(global.pHP+clamp(global.pMP,1,10),0,global.pHPMax);
+			
+			if (!global.muteSound && !audio_is_playing(snd_heal)) {
+				audio_play_sound(snd_heal,10,false);
+			}
 	}
 }
 

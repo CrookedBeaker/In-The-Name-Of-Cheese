@@ -11,7 +11,12 @@ if invincible = 0 && !other.pproj {
 	
 	invincible = 180;
 	
-	if other.fire {burn = 180};
+	if other.fire {
+		burn = 180;
+		if (!global.muteSound && !audio_is_playing(snd_burn)) {
+			audio_play_sound(snd_burn,10,false);
+		}
+	};
 	
 	instance_destroy(other);
 	
