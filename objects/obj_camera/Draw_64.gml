@@ -11,7 +11,7 @@ draw_sprite(spr_ui_corners,1,480,0);
 var mouseIsInTheWay = instance_exists(obj_player) ? (mouse_x > (x+160) && mouse_y > (y+64)) || (obj_player.x > (x+160) && obj_player.y > (y+64)) : 0;
 draw_set_alpha(1-0.5*mouseIsInTheWay);
 
-draw_sprite(spr_ui_corners,2,480,384);
+draw_sprite(spr_ui_corners,2+global.gunMode,480,384);
 
 //Display Spell
 var mpCost = "--";
@@ -41,8 +41,18 @@ draw_set_color(c_black);
 draw_set_halign(fa_center);
 draw_set_valign(fa_top);
 
-draw_text(608,434,mpCost+"MP");
-draw_text(513,434,string(global.pATK)+"ATK");
+//Attacks and Magic!
+if !global.gunMode {
+	draw_text(608,434,mpCost+"MP");
+	draw_text(513,434,string(global.pATK)+"ATK");
+} else {
+	draw_text(608,434,"N/A");
+	draw_text(
+		513,
+		434,
+		global.pMP > 0 ? "1MP" : string(clamp(ceil(global.pATK/2),1,3))+"ATK"
+	);
+}
 
 draw_set_font(fnt_ui);
 
@@ -77,7 +87,7 @@ draw_set_halign(fa_left);
 draw_set_font(fnt_ui);
 draw_set_alpha(1-0.5*mouseIsInTheWay)
 
-draw_sprite(spr_ui_main,0,0,480);
+draw_sprite(spr_ui_main,global.gunMode,0,480);
 
 draw_set_color(c_hp);
 draw_text(98,373,stringHP);

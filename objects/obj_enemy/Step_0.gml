@@ -5,8 +5,9 @@ if invincible > 0 {invincible--}
 
 if IsAttacked() {
 	
+	var r = global.gunMode ? clamp(ceil(global.pATK/2),1,3) : global.pATK; //Change the raw attack power depending on gamemode
 	var c = IsCrit(); //Roll for a critical
-	var d = c ? global.pATK+1 : global.pATK;
+	var d = c ? r+1 : r;
 	hp -= d;
 	NumParticle(d,c);
 	

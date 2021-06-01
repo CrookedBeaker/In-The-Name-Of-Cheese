@@ -68,7 +68,7 @@ image_angle = direction;
 
 //Bounce the thing off of you
 var proj = collision_circle(x,y,48,obj_projectile,0,0);
-if proj != noone {
+if proj != noone && !global.gunMode {
 	if proj.pproj {
 	
 	//Make the effect

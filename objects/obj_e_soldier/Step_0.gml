@@ -7,6 +7,7 @@ if invincible > 0 {invincible--}
 
 if IsAttacked() { //Detect being attacked, plus a lot of stuff
 	
+	var r = global.gunMode ? clamp(ceil(global.pATK/2),1,3) : global.pATK; //Change the raw attack power depending on gamemode
 	var c = IsCrit(); //Roll for a critical
 	var d = abs(image_angle-obj_player_body.direction); //Grab the player's direction and compare it to your own
 	
@@ -14,7 +15,7 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 	
 	if !armor { //Unarmored
 	
-		var d = c ? global.pATK+1 : global.pATK;
+		var d = c ? r+1 : r;
 		hp -= d;
 		NumParticle(d,c);
 		

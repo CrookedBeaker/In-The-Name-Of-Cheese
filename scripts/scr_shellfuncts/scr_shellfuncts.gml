@@ -83,3 +83,8 @@ function sh_kill(args) {
 	}
 	return "Killed all enemies.";
 }
+
+function sh_gun(args) {
+	global.gunMode = !global.gunMode;
+	return "Toggled Gun Mode.";
+}

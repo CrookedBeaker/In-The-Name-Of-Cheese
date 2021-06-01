@@ -1,6 +1,6 @@
 /// @description Ping!
 
-if IsAttacked() && image_index = 0 {
+if (IsAttacked() || hit) && image_index = 0 {
 	image_index++;
 	global.pause = true;
 	global.pauseDisable = true;

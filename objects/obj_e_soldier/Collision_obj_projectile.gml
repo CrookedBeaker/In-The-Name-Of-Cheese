@@ -28,6 +28,18 @@ if invincible = 0 && other.pproj {
 		oDir = direction;
 		
 		invincible = 60;
+		
+		var d = abs(image_angle-other.direction); //Grab the projectile's direction and compare it to your own
+		
+		if (d <= 50 || d >= 310) { //Remove armor with a successful hit to the back!
+			if !stunned {GoIdle(30)}
+			image_index = 2;
+			armor = false;
+			
+			//Drop the armor
+			var inst = instance_create_depth(x,y,depth+10,obj_corpse);
+			inst.image_angle = knockbackDir+90;
+		}
 	}
 	
 	instance_destroy(other);

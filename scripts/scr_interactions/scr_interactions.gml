@@ -5,7 +5,7 @@ function IsAttacked() {
 	if !variable_instance_exists(id,"touching") {touching = false}
 	if !variable_instance_exists(id,"invincible") {invincible = 0}
 	
-	if place_meeting(x,y,obj_player_body) && obj_player_body.attacking && obj_player_body.sprite_index = spr_player_body_stab && invincible = 0 {
+	if place_meeting(x,y,obj_player_body) && obj_player_body.attacking && (obj_player_body.sprite_index = spr_player_body_stab || obj_player_body.sprite_index = spr_player_body_whip) && invincible = 0 {
 		//Return true only on the first frame of being touched
 		var i = !touching;
 		touching = true;
