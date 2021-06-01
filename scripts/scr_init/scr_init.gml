@@ -31,6 +31,6 @@ function SetDefaultGlobals() {
 	global.transition = false;
 }
 
-global.gunMode = true;
+global.gunMode = false;
 
 SetDefaultGlobals();
