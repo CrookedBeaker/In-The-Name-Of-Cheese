@@ -3,5 +3,5 @@
 drawY-=0.5;
 
 if (drawY < -1100 || keyboard_check_pressed(vk_enter)) {
-	Transition(rm_intro,seq_fadeout,seq_fadein);
+	Transition(GMFileExists() ? rm_intro : rm_unlock,seq_fadeout,seq_fadein);
 }

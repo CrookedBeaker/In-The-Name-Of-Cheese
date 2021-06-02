@@ -37,6 +37,12 @@ function SetMenu(ind) {
 			MakeButton(2,"Back",64,true);
 			mLabel = "Options";
 			break;
+		case 2: //Game mode
+			MakeButton(0,"Normal",0,false);
+			MakeButton(1,"Gun Mode",32,false);
+			MakeButton(2,"Cancel",64,true);
+			mLabel = "Select Mode";
+			break;
 	}
 	
 	menuID = ind;

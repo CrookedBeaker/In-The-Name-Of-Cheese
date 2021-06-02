@@ -31,7 +31,7 @@
     "path": "folders/Objects/UI and Menu and Cutscenes.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_unlock",
+  "name": "obj_gmunlock",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -68,6 +68,9 @@ function LoadGame() {
 	
 	ini_close();
 	
+	//Set Gun Mode
+	global.gunMode = GMPFileExists();
+	
 	//Get outta here
 	Transition(rm_mainhall,seq_fadeout,seq_fadein);
 	
@@ -111,6 +114,9 @@ function LoadGameFR() {
 	
 	ini_close();
 	
+	//Set Gun Mode
+	global.gunMode = GMPFileExists();
+	
 	//Get outta here
 	Transition(rm_dhall,seq_fadeout,seq_fadein);
 	
@@ -126,4 +132,57 @@ function DeleteSaves() {
 
 function SaveExists() {
 	return (file_exists("MainHallSave.save") || file_exists("quicksave.save"))
+}
+
+function GMFileExists() { //Whether or not Gun Mode is unlocked
+	return file_exists("YouDidIt.txt");
+}
+
+function MakeGMFile() { //Make the file that unlocks Gun Mode
+	var f = file_text_open_write("YouDidIt.txt");
+	
+	var t = "CONGRADULATIONS, PLAYER!!!\n\n"+
+		"If you're reading this, you have beat the game, and\n"+
+		"have gotten bored with it, so you're rummaging through\n"+
+		"the game's save data, which I don't blame you for.\n"+
+		"\n"+
+		"I mean, what else is there to do?\n"+
+		"If you've already beat Gun Mode, that's all there is to\n"+
+		"it, and I don't plan to add any more content.\n"+
+		"\n"+
+		"Regardless, thanks for checking out my lil ol' game.\n"+
+		"I appreciate it, really!\n"+
+		"\n"+
+		"Your friendly neighborhood game dev,\n"+
+		"    Russell Vujs, Jr.\n"+
+		"     \"Crooked Beaker\"\n"+
+		"\n"+
+		"P.S. Don't delete this file.\n"+
+		"It's used to confirm you have Gun Mode unlocked.";
+	
+	file_text_write_string(f,t);
+	file_text_close(f);
+}
+
+function MakeGMPFile() { //Make the file that indicates that the current file is playing on Gun Mode
+	var f = file_text_open_write("GunMode.txt");
+	
+	var t = "This session is playing on Gun Mode.\n\n"+
+		"While you're here though...\n"+
+		"Follow @CrookedBeaker and @AcidWolf22 on Twitter.\n"+
+		"Thanks.\n"+
+		"\n"+
+		"P.S. Don't delete this file.\n"+
+		"It's used to indicate you're playing in Gun Mode.";
+	
+	file_text_write_string(f,t);
+	file_text_close(f);
+}
+
+function GMPFileExists() { //Whether or not Gun Mode is active
+	return file_exists("GunMode.txt");
+}
+
+function RemoveGMPFile() { //Remove Gun Mode Playing file
+	file_delete("GunMode.txt");
 }
