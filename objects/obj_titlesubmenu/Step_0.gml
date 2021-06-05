@@ -38,7 +38,14 @@ switch menuID {
 				SetMenu(1); //Refresh the list
 				break;
 			case 1: //M. Music
-				//Will do later
+				global.muteMusic = !global.muteMusic;
+				SetMenu(2); //Refresh the list
+				
+				if (global.muteMusic) {//(Un)Pause all music
+					//Unneeded rn
+				} else {
+					audio_resume_all();
+				}
 				break;
 			case 2 : //Back
 				instance_destroy();

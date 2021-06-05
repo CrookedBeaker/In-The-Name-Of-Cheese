@@ -75,7 +75,17 @@ switch menuID {
 				SetMenu(2); //Refresh the list
 				break;
 			case 1: //M. Music
-				//Will do later
+				global.muteMusic = !global.muteMusic;
+				SetMenu(2); //Refresh the list
+				
+				if (global.muteMusic) {//(Un)Pause all music
+					audio_pause_sound(mus_castlewall);
+					audio_pause_sound(mus_dungeon);
+					audio_pause_sound(mus_mainhall);
+					audio_pause_sound(mus_sewers);
+				} else {
+					audio_resume_all();
+				}
 				break;
 			case 2 : //Back
 				SetMenu(0);

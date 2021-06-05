@@ -141,7 +141,7 @@ function GMFileExists() { //Whether or not Gun Mode is unlocked
 function MakeGMFile() { //Make the file that unlocks Gun Mode
 	var f = file_text_open_write("YouDidIt.txt");
 	
-	var t = "CONGRADULATIONS, PLAYER!!!\n\n"+
+	var t = "CONGRATULATIONS, PLAYER!!!\n\n"+
 		"If you're reading this, you have beat the game, and\n"+
 		"have gotten bored with it, so you're rummaging through\n"+
 		"the game's save data, which I don't blame you for.\n"+
