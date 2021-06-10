@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"29ee8097-64a0-4681-84e2-8675ff9b1f38","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Dead Bodies",
     "path": "folders/Sprites/Enemies/Dead Bodies.yy",

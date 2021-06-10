@@ -34,6 +34,10 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 			
 			BloodSplatter(x+xMod,y+yMod);
 		}
+		
+		if !global.muteSound { //Play us a sound!
+			audio_play_sound(snd_enemy_hit,10,false);
+		}
 	
 	} else { //Armored
 		
@@ -55,6 +59,9 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 			inst.image_angle = knockbackDir+90;
 		}
 		
+		if !global.muteSound { //Play us a sound!
+			audio_play_sound(snd_enemy_hit,10,false);
+		}
 	}
 	
 	} else { //Attack is blocked
@@ -112,6 +119,10 @@ if hp <= 0 {
 	var inst = instance_create_depth(x,y,depth+50,obj_corpse);
 	inst.parent = object_index;
 	inst.image_angle = knockbackDir-90;
+	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_enemy_death,10,false);
+	}
 }
 
 //Idle waiting

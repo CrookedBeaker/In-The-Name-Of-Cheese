@@ -71,6 +71,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f62d6d90-66b8-4aa3-99cc-7a9ab23fc848","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Level Elements",
     "path": "folders/Sprites/Level Elements.yy",

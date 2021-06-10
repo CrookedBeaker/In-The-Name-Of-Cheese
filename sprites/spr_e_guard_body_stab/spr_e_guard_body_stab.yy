@@ -115,6 +115,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"eca98f3b-cb3a-4e49-bb13-c8d5dfb140be","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Guard",
     "path": "folders/Sprites/Enemies/Guard.yy",

@@ -103,6 +103,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a19b548c-f7cd-4689-9937-b18cc59c84dc","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Soldier",
     "path": "folders/Sprites/Enemies/Soldier.yy",

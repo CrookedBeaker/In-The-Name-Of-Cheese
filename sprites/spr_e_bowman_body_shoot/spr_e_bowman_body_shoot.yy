@@ -111,6 +111,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ba6f0095-ecda-4c4e-b93d-b80f60196477","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Bowman",
     "path": "folders/Sprites/Enemies/Bowman.yy",

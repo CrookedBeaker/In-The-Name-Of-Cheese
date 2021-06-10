@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"64ef6268-e9c7-4d58-9ce6-2c0932e364ef","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Title screen and cutscenes",
     "path": "folders/Sprites/Title screen and cutscenes.yy",

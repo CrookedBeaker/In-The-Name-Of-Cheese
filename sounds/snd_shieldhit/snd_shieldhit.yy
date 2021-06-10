@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_shieldhit.ogg",
-  "duration": 2.512755,
+  "duration": 0.334274,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",
