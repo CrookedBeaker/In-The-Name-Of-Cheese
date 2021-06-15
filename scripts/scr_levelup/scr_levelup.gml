@@ -41,5 +41,10 @@ function LevelUp(){
 	global.pEXPMax = global.pLVL*20; //Might tweak later
 	instance_create_depth(x,y,-2,obj_particle_lvlup);
 	
+	//Play a sound of congrats
+	if (!global.muteSound && !audio_is_playing(snd_levelup)) {
+		audio_play_sound(snd_levelup,10,false);
+	}
+	
 	}
 }

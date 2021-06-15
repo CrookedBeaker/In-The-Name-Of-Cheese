@@ -1,5 +1,5 @@
 {
-  "compression": 1,
+  "compression": 0,
   "volume": 1.0,
   "preload": false,
   "bitRate": 128,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_gate.ogg",
-  "duration": 4.322302,
+  "soundFile": "snd_levelup.ogg",
+  "duration": 1.185317,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_gate",
+  "name": "snd_levelup",
   "tags": [],
   "resourceType": "GMSound",
 }

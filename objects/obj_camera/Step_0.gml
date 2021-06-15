@@ -60,6 +60,9 @@ if keyboard_check_pressed(vk_escape) && !global.pauseDisable && !global.transiti
 	}
 }
 
+//Hide it
+if keyboard_check_pressed(vk_f1) {global.hideHUD = !global.hideHUD};
+
 //Make UI transparent whenmouse is far away
 /*
 if object_exists(obj_player) {

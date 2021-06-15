@@ -1,7 +1,6 @@
 /// @description Extra stuff
-//PP ASS
 
-//draw_set_alpha(1-0.5*(pDist>256))
+if !global.hideHUD {
 
 //UI Flare
 draw_sprite(spr_ui_corners,0,0,0);
@@ -119,6 +118,7 @@ if global.spells[4] {draw_sprite(spr_spells,4,132,444)};
 
 draw_set_alpha(1);
 
+}
 /*
 //Testing
 draw_set_halign(fa_left);

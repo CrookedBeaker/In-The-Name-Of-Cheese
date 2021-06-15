@@ -1,6 +1,6 @@
 {
   "compression": 1,
-  "volume": 1.0,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_gate.ogg",
-  "duration": 4.322302,
+  "soundFile": "snd_xp_la2.ogg",
+  "duration": 0.192029,
   "parent": {
-    "name": "SFX",
-    "path": "folders/Sounds/SFX.yy",
+    "name": "EXP",
+    "path": "folders/Sounds/SFX/EXP.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_gate",
+  "name": "snd_xp_la2",
   "tags": [],
   "resourceType": "GMSound",
 }

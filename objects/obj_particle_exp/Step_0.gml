@@ -25,6 +25,7 @@ if place_meeting(x,y,obj_player) {
 		LevelUp();
 	} else {
 		NumParticleGain(val,c_teal);
+		ExpSound(val = 1);
 	}
 }
 

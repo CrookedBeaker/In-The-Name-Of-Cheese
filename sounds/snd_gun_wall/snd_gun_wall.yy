@@ -10,14 +10,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_gate.ogg",
-  "duration": 4.322302,
+  "soundFile": "snd_gun_wall.ogg",
+  "duration": 0.742596,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",
   },
   "resourceVersion": "1.0",
-  "name": "snd_gate",
+  "name": "snd_gun_wall",
   "tags": [],
   "resourceType": "GMSound",
 }

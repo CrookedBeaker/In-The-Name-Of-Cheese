@@ -144,31 +144,17 @@ function AllKeys() {
 	return (global.keys[0] && global.keys[1] && global.keys[2] && global.keys[3]);
 }
 
-/*
-//Check to see if an object already has a p variable of an object's ID
-function NoIdForP(object) {
-	var i = true;
-	var inst = id;
-	
-	with object {
-		if variable_instance_exists(id,"p") {
-			if p = inst {i = false};
+//Play randomized sounds
+function ExpSound(small) {
+	if !global.muteSound {
+		var i = irandom(2);
+		
+		switch i {
+			case 0: audio_play_sound(small ? snd_xp_sm1 : snd_xp_la1, 10, false);
+				break;
+			case 1: audio_play_sound(small ? snd_xp_sm2 : snd_xp_la2, 10, false);
+				break;
+			case 2: audio_play_sound(small ? snd_xp_sm3 : snd_xp_la3, 10, false);
 		}
 	}
-	
-	return i;
-}
-
-//Retrieve the object with it
-function GetIdForP(object) {
-	var inst = id;
-	var i = -1;
-	
-	with object {
-		if variable_instance_exists(id,"p") {
-			if p = inst {i = id};
-		}
-	}
-	
-	return i;
 }

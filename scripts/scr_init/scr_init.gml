@@ -29,6 +29,8 @@ function SetDefaultGlobals() {
 	global.muteMusic = false;
 	
 	global.transition = false;
+	
+	global.hideHUD = false; //For debug purposes
 }
 
 global.gunMode = false;

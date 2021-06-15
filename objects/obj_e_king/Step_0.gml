@@ -105,6 +105,10 @@ if !(instance_exists(obj_e_guard) || instance_exists(obj_e_soldier) || instance_
 	summon = 0;
 	with obj_kingshield {sprite_index = spr_kingshield_out}
 	vuln = 330;
+	
+	if (!global.muteSound && !audio_is_playing(snd_shieldbreak)) {
+		audio_play_sound(snd_shieldbreak,10,false);
+	}
 }
 
 } else {
