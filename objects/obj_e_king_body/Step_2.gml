@@ -23,6 +23,11 @@ switch state {
 		sprite_index = spr_king_body_swing;
 		mask_index = sprite_index; //Set hitbox woo
 		//direction = obj_e_king.direction; //WHACK
+		
+		if (!global.muteSound && floor(image_index) = 3 && !sound) {
+			audio_play_sound(snd_stab,10,false);
+			sound = true;
+		}
 }
 
 //Rotate

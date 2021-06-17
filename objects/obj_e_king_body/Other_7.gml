@@ -15,3 +15,5 @@ if state = "swing" {
 	obj_e_king.state = "slam";
 	state = "slam";
 }
+
+sound = false;

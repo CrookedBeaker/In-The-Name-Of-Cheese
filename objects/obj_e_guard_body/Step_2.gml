@@ -29,6 +29,11 @@ if p.knockback = 0 { //Only change states
 			sprite_index = spr_e_guard_body_stab;
 			mask_index = sprite_index;
 			direction = p.direction; //Stabby
+			
+			if (!global.muteSound && floor(image_index) = 2 && !sound) {
+				audio_play_sound(snd_stab,10,false);
+				sound = true;
+			}
 	}
 	
 	//Rotate

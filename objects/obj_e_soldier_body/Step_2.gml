@@ -29,6 +29,11 @@ if p.knockback = 0 { //Only change states
 			sprite_index = p.armor ? spr_e_armor_body_stab : spr_e_soldier_body_stab;
 			mask_index = sprite_index;
 			direction = p.direction; //Stabby
+			
+			if (!global.muteSound && !sound) {
+				audio_play_sound(snd_stab,10,false);
+				sound = true;
+			}
 	}
 	
 	//Rotate

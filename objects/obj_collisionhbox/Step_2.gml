@@ -28,6 +28,27 @@ if place_meeting(x,y+vspd,obj_collision) && place_meeting(xprevious,y+vspd,obj_c
 	obj.y = y;
 }
 
+//Exit areas if tied to an enemy
+if (object_get_parent(obj.object_index) = obj_enemy) {
+	if place_meeting(x+hspd,y,obj_door) && place_meeting(x+hspd,yprevious,obj_door) {
+		if place_meeting(x,y,obj_door) {x = xprevious};
+		while !place_meeting(x+sign(hspd),y,obj_door) {
+			x+=sign(hspd);
+		}
+		hspd = 0;
+		obj.x = x;
+	}
+	
+	if place_meeting(x,y+vspd,obj_door) && place_meeting(xprevious,y+vspd,obj_door) {
+		if place_meeting(x,y,obj_door) {y = yprevious};
+		while !place_meeting(x,y+sign(vspd),obj_door) {
+			y+=sign(vspd);
+		}
+		vspd = 0;
+		obj.y = y;
+	}
+}
+
 //Other collision hitboxes!
 if place_meeting(x+hspd,y,obj_collisionhbox) && place_meeting(x+hspd,yprevious,obj_collisionhbox) {
 	if place_meeting(x,y,obj_collisionhbox) {x = xprevious};

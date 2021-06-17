@@ -65,6 +65,11 @@ function CastSpell() {
 				true
 			);
 			inst.pproj = true;
+			
+			if (!global.muteSound) {
+				audio_play_sound(snd_burn,10,false);
+			}
+			
 			break;
 		case 1: //Stunnnnnn
 			instance_create_depth(mouse_x,mouse_y,depth-10,obj_stun);
