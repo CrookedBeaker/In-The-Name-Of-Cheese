@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_warning.mp3",
-  "duration": 0.21398,
+  "soundFile": "snd_warning.ogg",
+  "duration": 1.005,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",
