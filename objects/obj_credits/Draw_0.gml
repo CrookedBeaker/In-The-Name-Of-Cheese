@@ -6,6 +6,7 @@ draw_sprite(spr_title_logo,0,x+160,y+drawY);
 draw_set_font(fnt_ui);
 draw_set_color(c_gray);
 draw_set_halign(fa_center);
+draw_set_valign(fa_top);
 
 draw_text(x+160,y+drawY+80,"Credits");
 
@@ -14,7 +15,7 @@ draw_text(x+160,y+drawY+160,"\n\nRussell Vujs, Jr.\naka \"Crooked Beaker\""+
 	"\nJared Riley"+
 	"\n\n\n"+
 	"\nNickolai Filipanov\naka \"RetroeyDoofery\""+
-	"\n\n\n"+
+	"\n\n\n\n"+
 	"TsunamiCoRyan"+
 	"\n\n\n"+
 	"\nAdigun Azikiwe Polack"+
@@ -28,7 +29,7 @@ draw_text(x+160,y+drawY+160,"Developed, programmed,\nand illustrated by\n\n"+
 	"Music by\n"+
 	"\n\n\n"+
 	"Sound effects by\n"+
-	"\n\n\n"+
+	"\n\n\n\n"+
 	"Additional art by\n"+
 	"\n\n\n"+
 	"\"Irishalini\" typeface by\n"+
@@ -43,7 +44,7 @@ draw_text(x+160,y+drawY+158,"\n\nRussell Vujs, Jr.\naka \"Crooked Beaker\""+
 	"\nJared Riley"+
 	"\n\n\n"+
 	"\nNickolai Filipanov\naka \"RetroeyDoofery\""+
-	"\n\n\n"+
+	"\n\n\n\n"+
 	"TsunamiCoRyan"+
 	"\n\n\n"+
 	"\nAdigun Azikiwe Polack"+
