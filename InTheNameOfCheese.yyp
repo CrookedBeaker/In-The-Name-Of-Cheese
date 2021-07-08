@@ -250,6 +250,7 @@
     {"id":{"name":"spr_gate_tower","path":"sprites/spr_gate_tower/spr_gate_tower.yy",},"order":4,},
     {"id":{"name":"spr_gate_dungeon","path":"sprites/spr_gate_dungeon/spr_gate_dungeon.yy",},"order":5,},
     {"id":{"name":"spr_king_body_slam","path":"sprites/spr_king_body_slam/spr_king_body_slam.yy",},"order":3,},
+    {"id":{"name":"obj_crosshair","path":"objects/obj_crosshair/obj_crosshair.yy",},"order":3,},
     {"id":{"name":"spr_switch","path":"sprites/spr_switch/spr_switch.yy",},"order":14,},
     {"id":{"name":"seq_rhombout","path":"sequences/seq_rhombout/seq_rhombout.yy",},"order":2,},
     {"id":{"name":"obj_break","path":"objects/obj_break/obj_break.yy",},"order":8,},

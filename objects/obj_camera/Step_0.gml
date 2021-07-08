@@ -38,8 +38,14 @@ if instance_exists(obj_player) {
 		}
 	} else if (follow != noone) {
 		//Cannot manipulate the camera while focused on something else
-		xTo = clamp(follow.x+(follow.sprite_width*follow.image_xscale*0.5),xmin,xmax);
-		yTo = clamp(follow.y+(follow.sprite_height*follow.image_yscale*0.5),ymin,ymax);
+		//Change the way it focuses depending on the orientation
+		if (follow.image_angle = 0) {
+			xTo = clamp(follow.x+(follow.sprite_width*follow.image_xscale*0.5),xmin,xmax);
+			yTo = clamp(follow.y+(follow.sprite_height*follow.image_yscale*0.5),ymin,ymax);
+		} else {
+			xTo = clamp(follow.x+(follow.sprite_height*follow.image_yscale*0.5),xmin,xmax);
+			yTo = clamp(follow.y+(follow.sprite_width*follow.image_xscale*0.5),ymin,ymax);
+		}
 	} /*else if follow != noone {
 		//Cannot manipulate the camera while focused on something else
 		xTo = clamp(follow.x,xmin,xmax);
@@ -48,7 +54,7 @@ if instance_exists(obj_player) {
 }
 
 //Update the camera
-var vm = matrix_build_lookat(x,y,-1000,x,y,0,0,1,0);
+var vm = matrix_build_lookat(x,y,-1001,x,y,0,0,1,0);
 camera_set_view_mat(camera,vm);
 
 //Summon the menu

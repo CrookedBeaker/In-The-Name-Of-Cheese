@@ -95,4 +95,6 @@ if global.pHP <= 0 {
 	instance_create_depth(obj_camera.x,obj_camera.y-32,-998,obj_death);
 }
 
+} else {
+	motion_set(direction,0); //STOP!!!
 }
