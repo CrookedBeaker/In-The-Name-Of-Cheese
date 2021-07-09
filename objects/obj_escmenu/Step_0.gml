@@ -84,6 +84,7 @@ switch menuID {
 					audio_pause_sound(mus_mainhall);
 					audio_pause_sound(mus_sewers);
 					audio_pause_sound(mus_library);
+					audio_pause_sound(mus_barracks);
 				} else {
 					audio_resume_all();
 				}

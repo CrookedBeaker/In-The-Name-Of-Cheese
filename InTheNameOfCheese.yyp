@@ -122,6 +122,7 @@
     {"id":{"name":"spr_king_body_swing","path":"sprites/spr_king_body_swing/spr_king_body_swing.yy",},"order":4,},
     {"id":{"name":"obj_door","path":"objects/obj_door/obj_door.yy",},"order":1,},
     {"id":{"name":"spr_ui_unlock","path":"sprites/spr_ui_unlock/spr_ui_unlock.yy",},"order":4,},
+    {"id":{"name":"mus_barracks","path":"sounds/mus_barracks/mus_barracks.yy",},"order":6,},
     {"id":{"name":"snd_magic","path":"sounds/snd_magic/snd_magic.yy",},"order":12,},
     {"id":{"name":"scr_saving","path":"scripts/scr_saving/scr_saving.yy",},"order":10,},
     {"id":{"name":"obj_header","path":"objects/obj_header/obj_header.yy",},"order":9,},

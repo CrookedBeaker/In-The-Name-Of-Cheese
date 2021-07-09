@@ -7,6 +7,7 @@ audio_stop_sound(mus_dungeon);
 audio_stop_sound(mus_mainhall);
 audio_stop_sound(mus_sewers);
 audio_stop_sound(mus_library);
+audio_stop_sound(mus_barracks);
 
 if (song != noone) { //Play the song!
 	audio_play_sound(song,9,true);
