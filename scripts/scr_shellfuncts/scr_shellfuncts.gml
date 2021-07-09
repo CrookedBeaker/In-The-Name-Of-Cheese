@@ -88,3 +88,7 @@ function sh_gun(args) {
 	global.gunMode = !global.gunMode;
 	return "Toggled Gun Mode.";
 }
+
+function sh_about(args) {
+	return "rt_shell by Nick Ver Voort.\nLicenced under\nCreative Commons BY 4.0.";
+}

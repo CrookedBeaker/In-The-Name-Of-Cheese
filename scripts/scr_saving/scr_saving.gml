@@ -186,3 +186,26 @@ function GMPFileExists() { //Whether or not Gun Mode is active
 function RemoveGMPFile() { //Remove Gun Mode Playing file
 	file_delete("GunMode.txt");
 }
+
+function SaveSettings() { //Save the settings :3
+	if file_exists("Settings.save") {file_delete("Settings.save")};
+	ini_open("Settings.save");
+	
+	ini_write_real("General","sound",global.muteSound);
+	ini_write_real("General","music",global.muteMusic);
+	
+	ini_close();
+}
+
+function LoadSettings() { //Save the settings :3
+	if file_exists("Settings.save") {
+	
+	ini_open("Settings.save");
+	
+	global.muteSound = ini_read_real("General","sound",false);
+	global.muteMusic = ini_read_real("General","music",false);
+	
+	ini_close();
+	
+	}
+}

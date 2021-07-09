@@ -39,7 +39,7 @@ switch menuID {
 				break;
 			case 1: //M. Music
 				global.muteMusic = !global.muteMusic;
-				SetMenu(2); //Refresh the list
+				SetMenu(1); //Refresh the list
 				
 				if (global.muteMusic) {//(Un)Pause all music
 					//Unneeded rn
@@ -48,6 +48,7 @@ switch menuID {
 				}
 				break;
 			case 2 : //Back
+				SaveSettings(); //Save your settings!
 				instance_destroy();
 		}
 		break;

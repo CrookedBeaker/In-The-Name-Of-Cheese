@@ -67,7 +67,7 @@ switch menuID {
 		}
 		break;
 		
-	case 2:
+	case 2: //Options
 		
 		switch select {
 			case 0: //M. Sound
@@ -83,16 +83,18 @@ switch menuID {
 					audio_pause_sound(mus_dungeon);
 					audio_pause_sound(mus_mainhall);
 					audio_pause_sound(mus_sewers);
+					audio_pause_sound(mus_library);
 				} else {
 					audio_resume_all();
 				}
 				break;
 			case 2 : //Back
+				SaveSettings(); //Save your settings!
 				SetMenu(0);
 		}
 		break;
 		
-	case 3:
+	case 3: //Quit game
 		
 		if select = 0 {
 			Transition(rm_title,seq_fadeout,seq_fadein);

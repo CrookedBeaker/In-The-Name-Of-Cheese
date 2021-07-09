@@ -43,6 +43,8 @@ switch ind {
 		*/
 }
 
-audio_play_sound(snd_button_confirm,10,false);
+if !global.muteSound {
+	audio_play_sound(snd_button_confirm,10,false);
+}
 
 }
