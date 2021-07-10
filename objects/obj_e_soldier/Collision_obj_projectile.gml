@@ -4,6 +4,9 @@ if invincible = 0 && other.pproj {
 	playerSpotted = true;
 	
 	var c = IsCrit(); //Roll for a critical
+	var d = abs(image_angle-other.direction); //Grab the projectile's direction and compare it to your own
+	
+	if (d < 120 || d > 240 || stunned) { //Attack lands (not shielded, stunned)
 	
 	if !armor { //Armor disabled
 		var d = c ? other.dmg+1 : other.dmg;
@@ -46,5 +49,13 @@ if invincible = 0 && other.pproj {
 	
 	if !global.muteSound { //Play us a sound!
 		audio_play_sound(snd_enemy_hit,10,false);
+	}
+	
+	} else { //Attack is blocked
+		instance_destroy(other);
+		
+		if !global.muteSound {
+			audio_play_sound(snd_shieldhit,10,false);
+		}
 	}
 }

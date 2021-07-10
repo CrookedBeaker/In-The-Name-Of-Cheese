@@ -11,7 +11,7 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 	var c = IsCrit(); //Roll for a critical
 	var d = abs(image_angle-obj_player_body.direction); //Grab the player's direction and compare it to your own
 	
-	if (d < 150 || d > 210 || stunned) { //Attack lands (not shielded, stunned)
+	if (d < 120 || d > 240 || stunned) { //Attack lands (not shielded, stunned)
 	
 	if !armor { //Unarmored
 	
