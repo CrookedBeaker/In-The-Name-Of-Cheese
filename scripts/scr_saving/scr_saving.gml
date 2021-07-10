@@ -27,6 +27,8 @@ function SaveGame() {
 	
 	ini_close();
 	
+	if global.gunMode {MakeGMPFile()};
+	
 	//Enable loading your save file from esc menu
 	global.mainHallReached = true;
 }
