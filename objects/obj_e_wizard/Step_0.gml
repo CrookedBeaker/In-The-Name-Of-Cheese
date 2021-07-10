@@ -69,14 +69,15 @@ image_angle = direction;
 //Bounce the thing off of you
 var proj = collision_circle(x,y,48,obj_projectile,0,0);
 if proj != noone && !global.gunMode {
-	if proj.pproj {
+	if proj.pproj && !proj.reflected {
 	
 	//Make the effect
 	var inst = instance_create_depth(x,y,depth-1,obj_ward);
 	inst.image_angle = point_direction(x,y,proj.x,proj.y);
 	//And reflect!
 	with proj {
-		MakeProjectile(x,y,depth,point_direction(x,y,obj_player.x,obj_player.y),spd+1,dmg,sprite_index,fire);
+		var inst = MakeProjectile(x,y,depth,point_direction(x,y,obj_player.x,obj_player.y),spd+1,dmg,sprite_index,fire);
+		inst.reflected = true; //So it can't be reflected again by wizards
 		instance_destroy();
 	}
 	

@@ -37,7 +37,7 @@ if p.knockback = 0 { //Only change states
 				MakeProjectile(
 					x+xMod,
 					y+yMod,
-					depth-1,
+					0,
 					point_direction(x+xMod,y+yMod,obj_player.x,obj_player.y),
 					5,
 					1+atkMod,

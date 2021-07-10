@@ -84,7 +84,7 @@ function CastSpell() {
 			
 			break;
 		case 3: //Sheeld
-			var inst = instance_create_depth(x+xMod,y+yMod,depth+1,obj_shield);
+			var inst = instance_create_depth(x+xMod,y+yMod,depth,obj_shield);
 			inst.image_angle = image_angle;
 			break;
 		case 4: //Don't die
