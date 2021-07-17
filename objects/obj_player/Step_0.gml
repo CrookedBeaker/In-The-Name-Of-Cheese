@@ -87,7 +87,7 @@ if global.pHP <= 0 {
 	}
 	
 	//Produce a dead body
-	var inst = instance_create_depth(x,y,depth+50,obj_corpse);
+	var inst = instance_create_depth(x,y,depth+150,obj_corpse);
 	inst.parent = object_index;
 	inst.image_angle = knockbackDir-90;
 	

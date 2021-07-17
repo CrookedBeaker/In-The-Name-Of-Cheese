@@ -27,6 +27,10 @@ if IsAttacked() && !instance_exists(obj_kingshield) {
 		
 		BloodSplatter(x+xMod,y+yMod);
 	}
+	
+	if !global.muteSound { //Play us a sound!
+		audio_play_sound(snd_enemy_hit,10,false);
+	}
 }
 
 //Getting knocked back, turning with direction
