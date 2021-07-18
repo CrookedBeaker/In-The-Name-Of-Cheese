@@ -4,6 +4,7 @@
 event_inherited();
 
 direction = image_angle;
+depth+=5; //Go below enemies and dead
 
 function activate() { //Override!
 	image_index++;
