@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_library.wav",
-  "duration": 69.81015,
+  "duration": 69.8051453,
   "parent": {
     "name": "OST",
     "path": "folders/Sounds/OST.yy",
