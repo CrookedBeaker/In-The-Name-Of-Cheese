@@ -11,7 +11,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "mus_castlewall.wav",
-  "duration": 105.0537,
+  "duration": 105.048706,
   "parent": {
     "name": "OST",
     "path": "folders/Sounds/OST.yy",
