@@ -41,6 +41,7 @@ if IsAttacked() { //Detect being attacked, plus a lot of stuff
 	
 	} else { //Armored
 		
+		hp -= 1;
 		NumParticle(1,c);
 		
 		knockback = 10;

@@ -17,8 +17,8 @@ audio_stop_sound(mus_dhallcs);
 audio_stop_sound(mus_escape);
 audio_stop_sound(mus_credits);
 
-if (song != noone) { //Play the song!
-	var loop = !(song = mus_sewerend || song = mus_dhallcs || song = mus_escape || song = mus_credits);
+if (song != noone && delay = 0) { //Play the song!
+	var loop = !(song = mus_intro || song = mus_sewerend || song = mus_dhallcs || song = mus_escape || song = mus_credits);
 	audio_play_sound(song,9,loop);
 }
 

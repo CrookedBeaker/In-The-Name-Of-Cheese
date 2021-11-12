@@ -111,15 +111,15 @@ function DropRan() {
 	if (irandom(9) < chance) {
 		if (global.pHP < global.pMP) { //Drop a potion first, then alternate if hp is less than mp
 			if (instance_number(obj_potion) <= instance_number(obj_elixir)) {
-				instance_create_depth(x,y,depth+5,obj_potion);
+				instance_create_depth(x,y,depth,obj_potion);
 			} else {
-				instance_create_depth(x,y,depth+5,obj_elixir);
+				instance_create_depth(x,y,depth,obj_elixir);
 			}
 		} else { //Drop an elixir first, then alternate if mp is less than hp
 			if (instance_number(obj_elixir) <= instance_number(obj_potion)) {
-				instance_create_depth(x,y,depth+5,obj_elixir);
+				instance_create_depth(x,y,depth,obj_elixir);
 			} else {
-				instance_create_depth(x,y,depth+5,obj_potion);
+				instance_create_depth(x,y,depth,obj_potion);
 			}
 		}
 	}
@@ -128,7 +128,7 @@ function DropRan() {
 function DropKey() {
 	if !instance_exists(obj_enemy) &&
 	  (room = rm_wall_5 || room = rm_barracks_4) {
-		instance_create_depth(x,y,depth+5,obj_key);
+		instance_create_depth(x,y,depth,obj_key);
 	}
 }
 
