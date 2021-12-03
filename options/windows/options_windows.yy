@@ -1,7 +1,7 @@
 {
   "option_windows_display_name": "In The Name of Cheese",
   "option_windows_executable_name": "${project_name}.exe",
-  "option_windows_version": "1.0.0.0",
+  "option_windows_version": "1.0.3.0",
   "option_windows_company_info": "Crooked Beaker Games",
   "option_windows_product_info": "In The Name of Cheese",
   "option_windows_copyright_info": "2021 Crooked Beaker Games, Good Friend Studios",

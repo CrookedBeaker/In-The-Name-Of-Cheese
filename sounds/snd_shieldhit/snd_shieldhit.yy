@@ -1,6 +1,7 @@
 {
+  "conversionMode": 0,
   "compression": 1,
-  "volume": 1.0,
+  "volume": 0.4,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "snd_shieldhit.ogg",
-  "duration": 0.334274,
+  "duration": 0.329274,
   "parent": {
     "name": "SFX",
     "path": "folders/Sounds/SFX.yy",
