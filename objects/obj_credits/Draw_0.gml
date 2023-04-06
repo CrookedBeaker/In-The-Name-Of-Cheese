@@ -10,7 +10,7 @@ draw_set_valign(fa_top);
 
 draw_text(x+160,y+drawY+80,"Credits");
 
-draw_text(x+160,y+drawY+160,"\n\nRussell Vujs, Jr.\naka \"Crooked Beaker\""+
+draw_text(x+160,y+drawY+160,"\n\nViolet Vujs\naka \"Crooked Beaker\""+
 	"\n\n\n"+
 	"\nJared Riley"+
 	"\n\n\n"+
@@ -39,7 +39,7 @@ draw_text(x+160,y+drawY+160,"Developed, programmed,\nand illustrated by\n\n"+
 
 draw_set_font(fnt_ui);
 draw_set_color(c_white);
-draw_text(x+160,y+drawY+158,"\n\nRussell Vujs, Jr.\naka \"Crooked Beaker\""+
+draw_text(x+160,y+drawY+158,"\n\nViolet Vujs\naka \"Crooked Beaker\""+
 	"\n\n\n"+
 	"\nJared Riley"+
 	"\n\n\n"+

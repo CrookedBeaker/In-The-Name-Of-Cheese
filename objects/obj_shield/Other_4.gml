@@ -1,5 +1,5 @@
 /// @description Correct yourself upon room entry
-if instance_exists(obj_player) {
+if instance_exists(obj_player) && instance_exists(obj_player_body) {
 	depth = obj_player_body.depth;
 	
 	//Face the mouse

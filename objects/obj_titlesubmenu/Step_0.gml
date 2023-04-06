@@ -17,13 +17,13 @@ switch menuID {
 				Transition(rm_sewer_1,seq_fadeout,seq_fadein);
 				DeleteSaves();
 				instance_destroy();
-				break;
 				
 				//Make or destroy a file as needed
 				RemoveGMPFile();
 				if global.gunMode {
 					MakeGMPFile();
 				}
+				break;
 			case 1: //Destroy
 				instance_destroy();
 				break;
